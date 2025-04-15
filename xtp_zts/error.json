@@ -1,0 +1,3987 @@
+[
+    {
+        "errorcode": "10200000",
+        "errormsg": "Login to quote server failed.",
+        "desc": "行情服务器未开启,或者没有网络连接"
+    },
+    {
+        "errorcode": "10200002",
+        "errormsg": "Can't get info from quote server.",
+        "desc": "行情服务器无法提供错误必要信息"
+    },
+    {
+        "errorcode": "10200003",
+        "errormsg": "Login to quote server failed: invalid parameters.",
+        "desc": "登录时输入的参数为空"
+    },
+    {
+        "errorcode": "10200004",
+        "errormsg": "Login to quote server failed. User has logined.",
+        "desc": "重复连接"
+    },
+    {
+        "errorcode": "10200006",
+        "errormsg": "",
+        "desc": "与行情服务器断开连接"
+    },
+    {
+        "errorcode": "10200100",
+        "errormsg": "Register service failed.",
+        "desc": "行情服务器无法注册响应回调函数"
+    },
+    {
+        "errorcode": "10200101",
+        "errormsg": "Create quote api failed: invalid parameters.",
+        "desc": "行情服务器无法创建,输入的参数不正确,client_id为0,或者存储路径不正确"
+    },
+    {
+        "errorcode": "10200103",
+        "errormsg": "Failed to bind UDP local port",
+        "desc": "用户API绑定UDP端口失败"
+    },
+    {
+        "errorcode": "10200104",
+        "errormsg": "Failed to alloc UDP session.",
+        "desc": "用户API建立UDP组播失败"
+    },
+    {
+        "errorcode": "10200105",
+        "errormsg": "",
+        "desc": "用户设置的UDPBufferSize太大或者太小"
+    },
+    {
+        "errorcode": "10200200",
+        "errormsg": "Receive failed: api object is null.",
+        "desc": "行情服务器接收数据后,用户API为空"
+    },
+    {
+        "errorcode": "10200300",
+        "errormsg": "Invalid parameters.",
+        "desc": "请求数据为空"
+    },
+    {
+        "errorcode": "10200301",
+        "errormsg": "Session failed: no connection.",
+        "desc": "请求数据时,获取session失败"
+    },
+    {
+        "errorcode": "10200302",
+        "errormsg": "",
+        "desc": "发送数据失败"
+    },
+    {
+        "errorcode": "10200303",
+        "errormsg": "invalid exchange type.",
+        "desc": "订阅或取消订阅时,请求参数与实际不匹配,通常为交易所不支持"
+    },
+    {
+        "errorcode": "10210000",
+        "errormsg": "Login to oms server failed.",
+        "desc": "交易服务器未开启,或者没有网络连接"
+    },
+    {
+        "errorcode": "10210002",
+        "errormsg": "Can't get info from oms server.",
+        "desc": "交易服务器无法提供错误必要信息"
+    },
+    {
+        "errorcode": "10210003",
+        "errormsg": "Login to oms server failed: invalid parameters.",
+        "desc": "登录时输入的参数为空"
+    },
+    {
+        "errorcode": "10210006",
+        "errormsg": "",
+        "desc": "与交易服务器断开连接"
+    },
+    {
+        "errorcode": "10210100",
+        "errormsg": "Register service failed.",
+        "desc": "交易服务器无法注册响应回调函数"
+    },
+    {
+        "errorcode": "10210101",
+        "errormsg": "Create trader api failed: invalid parameters.",
+        "desc": "交易服务器无法创建,输入的参数不正确,client_id为0,或者存储路径不正确"
+    },
+    {
+        "errorcode": "10210102",
+        "errormsg": "Create trader api failed.",
+        "desc": "用户API创建失败"
+    },
+    {
+        "errorcode": "10210200",
+        "errormsg": "Receive failed: api object is null.",
+        "desc": "交易服务器接收数据后,用户API为空"
+    },
+    {
+        "errorcode": "10210201",
+        "errormsg": "Receive failed: spi object is null.",
+        "desc": "交易服务器接收数据后,用户SPI为空"
+    },
+    {
+        "errorcode": "10210203",
+        "errormsg": "Receive failed: data is null.",
+        "desc": "交易服务器接收数据后,数据为空"
+    },
+    {
+        "errorcode": "10210204",
+        "errormsg": "Receive failed: order manager is null.",
+        "desc": "交易服务器接收数据后,数据为空"
+    },
+    {
+        "errorcode": "10210205",
+        "errormsg": "Receive xtp_id range failed.",
+        "desc": "从服务器获取xtp_id失败"
+    },
+    {
+        "errorcode": "10210300",
+        "errormsg": "Invalid parameters.",
+        "desc": "请求数据为空"
+    },
+    {
+        "errorcode": "10210301",
+        "errormsg": "Invalid parameters.",
+        "desc": "请求数据不正确"
+    },
+    {
+        "errorcode": "10210302",
+        "errormsg": "Session failed: no connection.",
+        "desc": "请求数据时,获取session失败"
+    },
+    {
+        "errorcode": "10210304",
+        "errormsg": "Can't get xtp_id.",
+        "desc": "获取xtp_id失败"
+    },
+    {
+        "errorcode": "10210305",
+        "errormsg": "Xtp_id is out of range.",
+        "desc": "xtp_id越界"
+    },
+    {
+        "errorcode": "10210401",
+        "errormsg": "Order transmission failed.",
+        "desc": "订单网络发送失败"
+    },
+    {
+        "errorcode": "11000000",
+        "errormsg": "Server error!",
+        "desc": "服务器错误"
+    },
+    {
+        "errorcode": "11000001",
+        "errormsg": "Server is not available!",
+        "desc": "服务器不可用"
+    },
+    {
+        "errorcode": "11000002",
+        "errormsg": "Server order num exceeded!",
+        "desc": "服务器订单数量超限"
+    },
+    {
+        "errorcode": "11000003",
+        "errormsg": "Server message num exceeded!",
+        "desc": "服务器信息数量超限"
+    },
+    {
+        "errorcode": "11000004",
+        "errormsg": "Server internal error!",
+        "desc": "服务器内部错误"
+    },
+    {
+        "errorcode": "11000005",
+        "errormsg": "Get server error!",
+        "desc": "获取服务失败"
+    },
+    {
+        "errorcode": "11000006",
+        "errormsg": "Alloc stock asset info failed!",
+        "desc": "分配证券资产信息失败"
+    },
+    {
+        "errorcode": "11000007",
+        "errormsg": "Alloc report info failed!",
+        "desc": "分配报告信息失败"
+    },
+    {
+        "errorcode": "11000010",
+        "errormsg": "Failed to get ticker quotes, ticker does not exist or cannot be traded!",
+        "desc": "获取标的静态行情错误,标的不支持校验,或者标的物不能被交易。"
+    },
+    {
+        "errorcode": "11000011",
+        "errormsg": "Failed to get ticker position information!",
+        "desc": "获取证券持仓信息失败"
+    },
+    {
+        "errorcode": "11000012",
+        "errormsg": "Failed to get allotment information!",
+        "desc": "获取配股信息失败"
+    },
+    {
+        "errorcode": "11000013",
+        "errormsg": "Failed to get user's fund account information!",
+        "desc": "获取用户的资金账户信息失败"
+    },
+    {
+        "errorcode": "11000014",
+        "errormsg": "Failed to get customer information!",
+        "desc": "获取客户信息失败"
+    },
+    {
+        "errorcode": "11000015",
+        "errormsg": "Failed to get user information!",
+        "desc": "获取用户信息失败"
+    },
+    {
+        "errorcode": "11000016",
+        "errormsg": "Failed to initialize server, load user information failed.",
+        "desc": "初始化服务失败,加载用户信息失败"
+    },
+    {
+        "errorcode": "11000017",
+        "errormsg": "Failed to check security account,load user information failed.",
+        "desc": "加载用户信息失败"
+    },
+    {
+        "errorcode": "11000020",
+        "errormsg": "Order capacity exceeded!",
+        "desc": "订单容量超限"
+    },
+    {
+        "errorcode": "11000021",
+        "errormsg": "Server capacity exceeded!",
+        "desc": "服务器容量超限"
+    },
+    {
+        "errorcode": "11000030",
+        "errormsg": "Authentication Failed! User or password is not correct!",
+        "desc": "用户权限认证失败,用户名或者密码不正确"
+    },
+    {
+        "errorcode": "11000031",
+        "errormsg": "Login Failed. Please make sure your account has permission!",
+        "desc": "登录失败,请检查用户开户交易权限"
+    },
+    {
+        "errorcode": "11000032",
+        "errormsg": "Login Failed. Please check your terminal information!",
+        "desc": "登录失败,用户终端信息不完整"
+    },
+    {
+        "errorcode": "11000033",
+        "errormsg": "Login Failed. Trade key is invalid or not set. Please set your key first!",
+        "desc": "登录失败,交易密钥错误或者未设置,请先设置交易秘钥"
+    },
+    {
+        "errorcode": "11000034",
+        "errormsg": "Login Failed. Login parameter cannot be null. Please check it!",
+        "desc": "登录失败,登录参数为空,请检查登录参数！"
+    },
+    {
+        "errorcode": "11000035",
+        "errormsg": "Login Failed. Fund account doesn't have trade permission. Your trade type is not allowed to trade.",
+        "desc": "登录失败,资金帐户交易权限不足,交易类型不允许交易。"
+    },
+    {
+        "errorcode": "11000036",
+        "errormsg": "Login Failed. IP is not correct.",
+        "desc": "登录失败,检查登录参数ip失败。"
+    },
+    {
+        "errorcode": "11000037",
+        "errormsg": "Login Failed. Mac address is not correct.",
+        "desc": "登录失败,检查登录参数mac地址失败。"
+    },
+    {
+        "errorcode": "11000038",
+        "errormsg": "Login Failed. Hard disc serial is not correct.",
+        "desc": "登录失败,检查登录参数硬盘序列失败。"
+    },
+    {
+        "errorcode": "11000039",
+        "errormsg": "Login Failed. Device information  is not correct.",
+        "desc": "登录失败,检查登录参数设备信息失败。"
+    },
+    {
+        "errorcode": "11000040",
+        "errormsg": "Login Failed. Phone no. is not correct.",
+        "desc": "登录失败,检查登录参数手机号码失败。"
+    },
+    {
+        "errorcode": "11000041",
+        "errormsg": "Login Failed,user status invalid.",
+        "desc": "登录失败,用户状态错误。"
+    },
+    {
+        "errorcode": "11000042",
+        "errormsg": "Login Failed,get user info failed,please check if user info is perfect.",
+        "desc": "登录失败,获取用户信息失败,请检查用户信息是否正确。"
+    },
+    {
+        "errorcode": "11000043",
+        "errormsg": "Login Failed,get user identity failed, used client id number exceeded.",
+        "desc": "登录失败,获取用户身份失败"
+    },
+    {
+        "errorcode": "11000044",
+        "errormsg": "Login Failed, used client id number exceeded.",
+        "desc": "登录失败,用户信息映射失败,用户标识超限"
+    },
+    {
+        "errorcode": "11000045",
+        "errormsg": "Login Failed,single user used client id number exceeded.",
+        "desc": "登录失败,用户信息映射失败,单个用户标识超限"
+    },
+    {
+        "errorcode": "11000046",
+        "errormsg": "Login Failed,user name is in black list.",
+        "desc": "登陆失败,用户在黑名单中"
+    },
+    {
+        "errorcode": "11000047",
+        "errormsg": "Login clientid invalid or not assigned.",
+        "desc": "Client id无效或者没设置"
+    },
+    {
+        "errorcode": "11000050",
+        "errormsg": "Got abnormal order confirm!",
+        "desc": "异常的订单确认"
+    },
+    {
+        "errorcode": "11000051",
+        "errormsg": "Got abnormal order report!",
+        "desc": "异常的订单响应"
+    },
+    {
+        "errorcode": "11000055",
+        "errormsg": "Order in session is forbidden!",
+        "desc": "非法订单"
+    },
+    {
+        "errorcode": "11000060",
+        "errormsg": "Database connect error.",
+        "desc": "数据库连接错误"
+    },
+    {
+        "errorcode": "11000100",
+        "errormsg": "Parameter error!",
+        "desc": "参数错误"
+    },
+    {
+        "errorcode": "11000101",
+        "errormsg": "Parameter user invalid!",
+        "desc": "无效的用户"
+    },
+    {
+        "errorcode": "11000102",
+        "errormsg": "Parameter stock code length check failed!",
+        "desc": "证券代码长度检查失败"
+    },
+    {
+        "errorcode": "11000103",
+        "errormsg": "Parameter null point error!",
+        "desc": "空指针错误"
+    },
+    {
+        "errorcode": "11000104",
+        "errormsg": "Parameter xtp id invalid!",
+        "desc": "参数错误,用户订单XTPID无效"
+    },
+    {
+        "errorcode": "11000105",
+        "errormsg": "Parameter exchange id invalid!",
+        "desc": "参数错误,交易所无效"
+    },
+    {
+        "errorcode": "11000106",
+        "errormsg": "Parameter xtp id already used!",
+        "desc": "参数错误,用户订单XTPID已被使用"
+    },
+    {
+        "errorcode": "11000107",
+        "errormsg": "Parameter quantity invalid!",
+        "desc": "参数错误,无效的订单数量"
+    },
+    {
+        "errorcode": "11000108",
+        "errormsg": "Parameter market invalid!",
+        "desc": "参数错误,无效的交易市场"
+    },
+    {
+        "errorcode": "11000109",
+        "errormsg": "Parameter price type invalid!",
+        "desc": "参数错误,无效的价格类型"
+    },
+    {
+        "errorcode": "11000110",
+        "errormsg": "Parameter price invalid!",
+        "desc": "参数错误,无效的价格"
+    },
+    {
+        "errorcode": "11000111",
+        "errormsg": "Parameter time invalid!",
+        "desc": "参数错误,无效的时间"
+    },
+    {
+        "errorcode": "11000112",
+        "errormsg": "Parameter fund account not existed or invalid!",
+        "desc": "参数错误,资金账户不存在或者无效"
+    },
+    {
+        "errorcode": "11000113",
+        "errormsg": "Parameter fund transfer type invalid!",
+        "desc": "参数错误,无效的资金划转类型"
+    },
+    {
+        "errorcode": "11000114",
+        "errormsg": "Parameter side invalid!",
+        "desc": "参数错误,无效的买卖方向"
+    },
+    {
+        "errorcode": "11000115",
+        "errormsg": "Parameter amount invalid or exceeded!",
+        "desc": "参数错误,总资产无效或者溢出"
+    },
+    {
+        "errorcode": "11000116",
+        "errormsg": "Parameter password length invalid or exceeded!",
+        "desc": "参数错误,密码长度无效或者超长"
+    },
+    {
+        "errorcode": "11000118",
+        "errormsg": "Transfer forbidden,not colocation user.",
+        "desc": "禁止当前资金转移操作(非colocation账户)"
+    },
+    {
+        "errorcode": "11000119",
+        "errormsg": "Parameter position effect invalid!",
+        "desc": "参数错误,开平标志错误"
+    },
+    {
+        "errorcode": "11000300",
+        "errormsg": "Service error!",
+        "desc": "调用服务错误"
+    },
+    {
+        "errorcode": "11000301",
+        "errormsg": "Risk control rejected!",
+        "desc": "风控被拒绝"
+    },
+    {
+        "errorcode": "11000302",
+        "errormsg": "Risk control init failed!",
+        "desc": "风控模块初始化失败"
+    },
+    {
+        "errorcode": "11000303",
+        "errormsg": "Failed to check order!",
+        "desc": "检查订单失败"
+    },
+    {
+        "errorcode": "11000304",
+        "errormsg": "Failed to find order data area!",
+        "desc": "查找报单数据失败"
+    },
+    {
+        "errorcode": "11000305",
+        "errormsg": "Failed to find original order!",
+        "desc": "查找原始报单失败"
+    },
+    {
+        "errorcode": "11000306",
+        "errormsg": "Service not supported!",
+        "desc": "该业务尚未支持"
+    },
+    {
+        "errorcode": "11000307",
+        "errormsg": "Parameter side or position_effect is not supported by ticker.",
+        "desc": "参数side或者参数position_effect与证券可支持的业务不符"
+    },
+    {
+        "errorcode": "11000308",
+        "errormsg": "Business type not match with security type.",
+        "desc": "业务类型与证券类型不匹配"
+    },
+    {
+        "errorcode": "11000309",
+        "errormsg": "Business type does not match with side.",
+        "desc": "业务类型与方向不匹配"
+    },
+    {
+        "errorcode": "11000310",
+        "errormsg": "User type not match with business type.",
+        "desc": "业务类型与用户类型不匹配"
+    },
+    {
+        "errorcode": "11000311",
+        "errormsg": "Trade exchange is not registered in this server!",
+        "desc": "通常为一账号两中心设置时发生,未在对应节点交易对应市场证券"
+    },
+    {
+        "errorcode": "11000313",
+        "errormsg": "Failed to get security account!",
+        "desc": "获取证券账户失败"
+    },
+    {
+        "errorcode": "11000314",
+        "errormsg": "ST stock can not be traded by market order!",
+        "desc": "ST股票不能使用市价订单交易"
+    },
+    {
+        "errorcode": "11000315",
+        "errormsg": "Delisting ticker can not be traded by market order!",
+        "desc": "退市股票不能使用市价订单交易"
+    },
+    {
+        "errorcode": "11000316",
+        "errormsg": "Failed to check order id!",
+        "desc": "检查订单ID失败"
+    },
+    {
+        "errorcode": "11000317",
+        "errormsg": "Failed to check original order id!",
+        "desc": "检查原始订单ID失败"
+    },
+    {
+        "errorcode": "11000318",
+        "errormsg": "New orders for ETF subscription and redemption are not allowed to cancel!",
+        "desc": "ETF申购和赎回的新订单不允许撤销"
+    },
+    {
+        "errorcode": "11000319",
+        "errormsg": "Failed to generate cancel reject response!",
+        "desc": "生成撤单拒绝响应失败"
+    },
+    {
+        "errorcode": "11000320",
+        "errormsg": "Failed generate trade report info failed!",
+        "desc": "生成成交报告信息失败"
+    },
+    {
+        "errorcode": "11000321",
+        "errormsg": "Generate order response failed!",
+        "desc": "生成订单响应失败"
+    },
+    {
+        "errorcode": "11000330",
+        "errormsg": "Forward message failed!",
+        "desc": "转发信息失败"
+    },
+    {
+        "errorcode": "11000331",
+        "errormsg": "Forward order failed,ogw session invalid!",
+        "desc": "转发订单失败,与报盘会话异常"
+    },
+    {
+        "errorcode": "11000332",
+        "errormsg": "Forward order to tas server failed,session invalid!",
+        "desc": "转发订单至tas失败,连接异常"
+    },
+    {
+        "errorcode": "11000333",
+        "errormsg": "Forward order to tas add push data failed.",
+        "desc": "转发订单至tas推送失败"
+    },
+    {
+        "errorcode": "11000334",
+        "errormsg": "send order to tas server failed,session invalid!",
+        "desc": "发送订单至tas失败,连接异常"
+    },
+    {
+        "errorcode": "11000341",
+        "errormsg": "Failed to check order,request user does not match with server saved!",
+        "desc": "检查订单失败,请求用户与服务器保存的不匹配！"
+    },
+    {
+        "errorcode": "11000342",
+        "errormsg": "Cancel order request already received!",
+        "desc": "撤单请求已发送"
+    },
+    {
+        "errorcode": "11000343",
+        "errormsg": "Target order already finished!",
+        "desc": "报单已经成交或者已经撤销"
+    },
+    {
+        "errorcode": "11000344",
+        "errormsg": "Failed to check order,target order is cancel order!",
+        "desc": "检查撤单失败,要撤的订单是撤单"
+    },
+    {
+        "errorcode": "11000345",
+        "errormsg": "Failed to save request information!",
+        "desc": "保存请求信息失败"
+    },
+    {
+        "errorcode": "11000346",
+        "errormsg": "Failed to generate cancel order, original order market value incorrect!",
+        "desc": "生成撤单失败,原始报单中交易市场错误"
+    },
+    {
+        "errorcode": "11000350",
+        "errormsg": "Find none record!",
+        "desc": "未发现记录"
+    },
+    {
+        "errorcode": "11000368",
+        "errormsg": "Failed to get security info in specified market!",
+        "desc": "在指定市场中获取证券信息失败"
+    },
+    {
+        "errorcode": "11000369",
+        "errormsg": "Failed to get security info!",
+        "desc": "获取证券信息失败"
+    },
+    {
+        "errorcode": "11000370",
+        "errormsg": "Failed to get new stock apply info !",
+        "desc": "获取新股申购信息失败"
+    },
+    {
+        "errorcode": "11000371",
+        "errormsg": "Failed to cancel order,new stock apply order can not be canceled!",
+        "desc": "撤单失败,新股申购订单不能被撤销"
+    },
+    {
+        "errorcode": "11000372",
+        "errormsg": "Quantity invalid,new stock apply quantity exceeded!",
+        "desc": "数量无效,新股申购数量超出"
+    },
+    {
+        "errorcode": "11000373",
+        "errormsg": "Failed to get new stock apply info in specified market!",
+        "desc": "在指定市场中获取新股申购信息失败"
+    },
+    {
+        "errorcode": "11000375",
+        "errormsg": "Failed to get stock allotment info!",
+        "desc": "获取股票分配信息失败"
+    },
+    {
+        "errorcode": "11000376",
+        "errormsg": "Failed to get new stock allotment info in specified market!",
+        "desc": "在指定市场中获取新股申购信息失败"
+    },
+    {
+        "errorcode": "11000380",
+        "errormsg": "Message repeated!",
+        "desc": "消息重复"
+    },
+    {
+        "errorcode": "11000381",
+        "errormsg": "Fund account remain balance not sufficient!",
+        "desc": "资金账户余额不足"
+    },
+    {
+        "errorcode": "11000382",
+        "errormsg": "Fund transfer failed!",
+        "desc": "资金划转失败"
+    },
+    {
+        "errorcode": "11000383",
+        "errormsg": "Check ETF quota failed,ETF quota not sufficient.",
+        "desc": "检查ETF配额出错,ETF配额不足"
+    },
+    {
+        "errorcode": "11000384",
+        "errormsg": "Fund account remain balance not sufficient!",
+        "desc": "可划转资金不足"
+    },
+    {
+        "errorcode": "11000386",
+        "errormsg": "United Risk Control Failed!",
+        "desc": "联合风控失败"
+    },
+    {
+        "errorcode": "11000390",
+        "errormsg": "Failed to get etf base information!",
+        "desc": "获取ETF基本信息失败"
+    },
+    {
+        "errorcode": "11000391",
+        "errormsg": "Failed to get etf report type!",
+        "desc": "获取ETF回报类型出错"
+    },
+    {
+        "errorcode": "11000392",
+        "errormsg": "Failed to get etf fund report!",
+        "desc": "获取ETF资金回报出错"
+    },
+    {
+        "errorcode": "11000400",
+        "errormsg": "Option force Failed!",
+        "desc": "期权强平失败"
+    },
+    {
+        "errorcode": "11000401",
+        "errormsg": "Failed to get fund and stock, fund changed!",
+        "desc": "获取资金、持仓失败,资金被修改"
+    },
+    {
+        "errorcode": "11000402",
+        "errormsg": "Failed to get target user!",
+        "desc": "获取目标用户失败"
+    },
+    {
+        "errorcode": "11000403",
+        "errormsg": "Failed to check input para!",
+        "desc": "输入参数未通过校验"
+    },
+    {
+        "errorcode": "11000404",
+        "errormsg": "Failed to check ticker!",
+        "desc": "证券校验失败"
+    },
+    {
+        "errorcode": "11000405",
+        "errormsg": "Calc error!",
+        "desc": "计算失败"
+    },
+    {
+        "errorcode": "11000406",
+        "errormsg": "Failed to read/write database!",
+        "desc": "读写数据库失败"
+    },
+    {
+        "errorcode": "11000407",
+        "errormsg": "Failed to set authority, invalid operation!",
+        "desc": "设置权限失败,无效的操作"
+    },
+    {
+        "errorcode": "11000408",
+        "errormsg": "Failed to set authority, banned stock reach max!",
+        "desc": "设置权限失败,禁售股票达到上限"
+    },
+    {
+        "errorcode": "11000409",
+        "errormsg": "Snapshot not found!",
+        "desc": "找不到快照"
+    },
+    {
+        "errorcode": "11000410",
+        "errormsg": "Failed to select KDCredit database!",
+        "desc": "查询中转数据库失败"
+    },
+    {
+        "errorcode": "11000411",
+        "errormsg": "Failed to insert KDCredit database!",
+        "desc": "写入中转数据库失败"
+    },
+    {
+        "errorcode": "11000420",
+        "errormsg": "Credit force failed!",
+        "desc": "信用业务强平执行失败"
+    },
+    {
+        "errorcode": "11000421",
+        "errormsg": "Credit force order rejected, credit status and debt status normal!",
+        "desc": "信用业务强平拒单(账户状态无异常)"
+    },
+    {
+        "errorcode": "11000450",
+        "errormsg": "Too much order,order frequency limited!",
+        "desc": "订单数量太多,报单频率被限"
+    },
+    {
+        "errorcode": "11000451",
+        "errormsg": "User trade order or open order is limited!",
+        "desc": "资金账户被限制交易"
+    },
+    {
+        "errorcode": "11000452",
+        "errormsg": "User query frequency limited!",
+        "desc": "用户查询频率受限"
+    },
+    {
+        "errorcode": "11000500",
+        "errormsg": "Failed to check user's authority!",
+        "desc": "检查用户权限失败"
+    },
+    {
+        "errorcode": "11000510",
+        "errormsg": "user's customer is invalid!",
+        "desc": "用户客户号无效"
+    },
+    {
+        "errorcode": "11000511",
+        "errormsg": "user's security account is invalid!",
+        "desc": "用户证券账户无效"
+    },
+    {
+        "errorcode": "11000512",
+        "errormsg": "user's fund account is invalid!",
+        "desc": "用户资金账号无效"
+    },
+    {
+        "errorcode": "11000520",
+        "errormsg": "Login Failed,check user's customer authority failed!",
+        "desc": "登录失败,检查用户的客户权限失败"
+    },
+    {
+        "errorcode": "11000521",
+        "errormsg": "Login Failed,check user's security account authority failed!",
+        "desc": "登录失败,检查用户的证券账户权限失败"
+    },
+    {
+        "errorcode": "11000522",
+        "errormsg": "Login Failed,check user's fund account authority failed!",
+        "desc": "登录失败,检查用户的资金账户权限失败"
+    },
+    {
+        "errorcode": "11000523",
+        "errormsg": "Login Failed,user is in prohibit stock operation blacklist!",
+        "desc": "用户因为一类股票的操作在黑名单中而被禁止登录"
+    },
+    {
+        "errorcode": "11000530",
+        "errormsg": "Authority module rejects order, stock in blacklist!",
+        "desc": "订单中股票对应的操作在黑名单中导致订单被拒绝"
+    },
+    {
+        "errorcode": "11000540",
+        "errormsg": "User has no net address in the whitelist!",
+        "desc": "用户在网络地址白名单没有地址(可能导致登录被拒绝)"
+    },
+    {
+        "errorcode": "11000541",
+        "errormsg": "User login with net address not in the whitelist!",
+        "desc": "用户登录的网络地址不在白名单中"
+    },
+    {
+        "errorcode": "11000550",
+        "errormsg": "Fund account has no risk stock board buy right!",
+        "desc": "账户未开通风险警示板权限"
+    },
+    {
+        "errorcode": "11000551",
+        "errormsg": "Fund account has no market order right!",
+        "desc": "账户未开通市价单权限"
+    },
+    {
+        "errorcode": "11000552",
+        "errormsg": "Fund account has no startup board buy right!",
+        "desc": "账户未开通创业板购买权限"
+    },
+    {
+        "errorcode": "11000553",
+        "errormsg": "Fund account has no delisting board buy right!",
+        "desc": "账户未开通退市板购买权限"
+    },
+    {
+        "errorcode": "11000554",
+        "errormsg": "Fund account has no structure fund buy or split right!",
+        "desc": "账户未开通分级基金购买和拆分权限"
+    },
+    {
+        "errorcode": "11000555",
+        "errormsg": "Fund account has no inter etf creation or redemption right!",
+        "desc": "账户未开通跨市场ETF申赎权限"
+    },
+    {
+        "errorcode": "11000560",
+        "errormsg": "Security account has no risk stock board buy right!",
+        "desc": "证券账户未开通风险警示板购买权限"
+    },
+    {
+        "errorcode": "11000561",
+        "errormsg": "Security account has no market order right!",
+        "desc": "证券账户未开通市价单权限"
+    },
+    {
+        "errorcode": "11000562",
+        "errormsg": "Security account has no startup board buy right!",
+        "desc": "证券账户未开通创业板板购买权限"
+    },
+    {
+        "errorcode": "11000563",
+        "errormsg": "Security account has no delisting board buy right!",
+        "desc": "证券账户未开通退市板板购买权限"
+    },
+    {
+        "errorcode": "11000564",
+        "errormsg": "Security account has no structure fund buy buy or split right!",
+        "desc": "证券账户未开通分级基金购买和拆分权限"
+    },
+    {
+        "errorcode": "11000565",
+        "errormsg": "Security account has no technology board stock right!",
+        "desc": "证券账户未开通科创板购买权限"
+    },
+    {
+        "errorcode": "11000566",
+        "errormsg": "Can not get convertable bond base ticker!",
+        "desc": "无法找到可转债对应的正股数据"
+    },
+    {
+        "errorcode": "11000567",
+        "errormsg": "Security account has no convert bond right!",
+        "desc": "证券账户没有可转债权限"
+    },
+    {
+        "errorcode": "11000568",
+        "errormsg": "Security account has no bond qualification trade right!",
+        "desc": "证券账户没有债券交易权限"
+    },
+    {
+        "errorcode": "11000569",
+        "errormsg": "Security account has no organization qualification trade right!",
+        "desc": "证券账户没有机构户交易权限"
+    },
+    {
+        "errorcode": "11000570",
+        "errormsg": "Security account has no program trading right!",
+        "desc": "证券账户没有程序化交易权限"
+    },
+    {
+        "errorcode": "11000571",
+        "errormsg": "Can not buy too many risk stock!",
+        "desc": "不能超额购买风险股票"
+    },
+    {
+        "errorcode": "11000723",
+        "errormsg": "Submit order to offer failed!",
+        "desc": "提交订单到报盘失败"
+    },
+    {
+        "errorcode": "11000724",
+        "errormsg": "Invalid session!",
+        "desc": "会话无效"
+    },
+    {
+        "errorcode": "11000900",
+        "errormsg": "xoms credit error",
+        "desc": "信用业务一般错误"
+    },
+    {
+        "errorcode": "11000901",
+        "errormsg": "Security is not in credit guarantee list!",
+        "desc": "证券不属于信用担保证券列表"
+    },
+    {
+        "errorcode": "11000902",
+        "errormsg": "Security is not in credit target list!",
+        "desc": "证券不属于信用标的证券列表"
+    },
+    {
+        "errorcode": "11000903",
+        "errormsg": "Strong stock holder can not make margin trades!",
+        "desc": "大股东等身份账户限制进行融资融券交易"
+    },
+    {
+        "errorcode": "11000904",
+        "errormsg": "Invalid credit cash repay amount!",
+        "desc": "无效的现金还款金额"
+    },
+    {
+        "errorcode": "11000905",
+        "errormsg": "Do not have enough fund to do cash repay!",
+        "desc": "账户资金不足以执行现金还款"
+    },
+    {
+        "errorcode": "11000906",
+        "errormsg": "Repay stock qty is more than stock debt!",
+        "desc": "还券数量超过可还券数量"
+    },
+    {
+        "errorcode": "11000907",
+        "errormsg": "Invalid credit risk level!",
+        "desc": "无效的信用账户风险评级"
+    },
+    {
+        "errorcode": "11000908",
+        "errormsg": "Order is invalid in current credit status!",
+        "desc": "账户当前信用状态禁止当前委托"
+    },
+    {
+        "errorcode": "11000909",
+        "errormsg": "Order is invalid in current debt expire status!",
+        "desc": "存在逾期两融负债合约而禁止当前委托"
+    },
+    {
+        "errorcode": "11000910",
+        "errormsg": "Invalid credit non-trade qty!",
+        "desc": "无效的信用业务非交易委托数量"
+    },
+    {
+        "errorcode": "11000911",
+        "errormsg": "Order is invalid in current credit maintenance rate limit!",
+        "desc": "账户当前维保比例禁止当前委托"
+    },
+    {
+        "errorcode": "11000912",
+        "errormsg": "Invalid price of short sell order (not higher than last price)!",
+        "desc": "无效的融券卖出价格(没有高于最新价)"
+    },
+    {
+        "errorcode": "11000913",
+        "errormsg": "Invalid credit cancel order (stock repay stock or surplus stock trans)!",
+        "desc": "无效的信用业务撤单(现券还券和余券划转不允许撤单)"
+    },
+    {
+        "errorcode": "11000914",
+        "errormsg": "Invalid credit force side!",
+        "desc": "无效的信用业务强平委托类型"
+    },
+    {
+        "errorcode": "11000915",
+        "errormsg": "Stock in reduct limit list of current account!",
+        "desc": "无法减持账户减持限制证券"
+    },
+    {
+        "errorcode": "11000916",
+        "errormsg": "Expired force repay stock qty is more than expired stock debt!",
+        "desc": "强平还券数量超过逾期合约可还券数量"
+    },
+    {
+        "errorcode": "11000917",
+        "errormsg": "Request repay amount is less than the debt interest fee",
+        "desc": "还息金额不足"
+    },
+    {
+        "errorcode": "11000918",
+        "errormsg": "sell stock repay certain debt's interest fee, the debt is NOT exist!",
+        "desc": "卖券还息找不到目标负债合约,无法找到对应负债合约"
+    },
+    {
+        "errorcode": "11000919",
+        "errormsg": "Credit force order type does not match the credit status of current account!",
+        "desc": "不适当的强平委托类型"
+    },
+    {
+        "errorcode": "11000921",
+        "errormsg": "Credit stk fi concentrate rate check failed!",
+        "desc": "未通过融资余额业务规模控制校验"
+    },
+    {
+        "errorcode": "11000922",
+        "errormsg": "Credit stk sl concentrate rate check failed!",
+        "desc": "未通过融券余额业务规模控制校验"
+    },
+    {
+        "errorcode": "11000923",
+        "errormsg": "Credit stk net short pos concentrate rate check failed!",
+        "desc": "融券卖出委托未通过净空头校验"
+    },
+    {
+        "errorcode": "11000924",
+        "errormsg": "Trade scale check quota exceed!",
+        "desc": "规模控制校验配额用尽"
+    },
+    {
+        "errorcode": "11000925",
+        "errormsg": "Credit stk net long pos concentrate rate check failed!",
+        "desc": "买入/融资买入未通过净多头校验"
+    },
+    {
+        "errorcode": "11000926",
+        "errormsg": "Credit stk trade scale check failed!",
+        "desc": "买入/融资买入未通过规模控制校验"
+    },
+    {
+        "errorcode": "11000927",
+        "errormsg": "Security concentrate is high!",
+        "desc": "集中度过高"
+    },
+    {
+        "errorcode": "11000930",
+        "errormsg": "Credit trans out failed, try again.",
+        "desc": "信用转出失败,请重试。"
+    },
+    {
+        "errorcode": "11000940",
+        "errormsg": "Debt extend internal error",
+        "desc": "展期内部错误,请联系运维人员"
+    },
+    {
+        "errorcode": "11000941",
+        "errormsg": "Invalid debt status!",
+        "desc": "无效的负债合约状态(不是未偿还或者部分偿还状态)"
+    },
+    {
+        "errorcode": "11000942",
+        "errormsg": "The debt no need to repay",
+        "desc": "目标合约无负债,不能展期"
+    },
+    {
+        "errorcode": "11000943",
+        "errormsg": "The debt's interest fee need to be repaid firstly!",
+        "desc": "需要先偿还目标合约的息费"
+    },
+    {
+        "errorcode": "11000944",
+        "errormsg": "Maintenance rate low!",
+        "desc": "维持担保比例过低,不能展期"
+    },
+    {
+        "errorcode": "11000945",
+        "errormsg": "ST risk ratio invalid!",
+        "desc": "st风险资产比例过高,不能展期"
+    },
+    {
+        "errorcode": "11000946",
+        "errormsg": "The debt unrepaid amount is higher!",
+        "desc": "目标负债合约负债金额过高,不能展期"
+    },
+    {
+        "errorcode": "11000947",
+        "errormsg": "视柜台返回错误而定",
+        "desc": "展期主柜台错误"
+    },
+    {
+        "errorcode": "11000948",
+        "errormsg": "Security concentrate is high!",
+        "desc": "单一证券持仓集中度过高(仅限注册制创业板股票或者科创板股票)"
+    },
+    {
+        "errorcode": "11001001",
+        "errormsg": "Get strategy info failed!",
+        "desc": "获取组合策略信息失败。"
+    },
+    {
+        "errorcode": "11001002",
+        "errormsg": "Get combined asset failed!",
+        "desc": "获取组合策略持仓失败。"
+    },
+    {
+        "errorcode": "11001003",
+        "errormsg": "Leg num error!",
+        "desc": "组合策略腿数错误。"
+    },
+    {
+        "errorcode": "11001004",
+        "errormsg": "Get contract asset failed!",
+        "desc": "获取合约持仓失败。"
+    },
+    {
+        "errorcode": "11001005",
+        "errormsg": "Market of contract asset error!",
+        "desc": "合约持仓的市场错误。"
+    },
+    {
+        "errorcode": "11001006",
+        "errormsg": "Type of combined asset error!",
+        "desc": "持仓不是组合策略类型。"
+    },
+    {
+        "errorcode": "11001007",
+        "errormsg": "Alloc combined asset failed!",
+        "desc": "分配组合策略持仓失败。"
+    },
+    {
+        "errorcode": "11001008",
+        "errormsg": "Insert combined asset failed!",
+        "desc": "插入组合策略持仓失败。"
+    },
+    {
+        "errorcode": "11001009",
+        "errormsg": "Alloc combined pointer asset failed!",
+        "desc": "分配组合策略指针失败。"
+    },
+    {
+        "errorcode": "11001110",
+        "errormsg": "Insert combined pointer failed!",
+        "desc": "插入组合策略指针失败。"
+    },
+    {
+        "errorcode": "11001111",
+        "errormsg": "Invalid margin rate of contract!",
+        "desc": "无效的合约保证金参数。"
+    },
+    {
+        "errorcode": "11001112",
+        "errormsg": "Invalid combined strategy id!",
+        "desc": "无效的组合策略ID。"
+    },
+    {
+        "errorcode": "11001113",
+        "errormsg": "Length of contract code error!",
+        "desc": "成分合约代码长度错误。"
+    },
+    {
+        "errorcode": "11001114",
+        "errormsg": "Length of combined number error!",
+        "desc": "组合编码长度错误。"
+    },
+    {
+        "errorcode": "11001115",
+        "errormsg": "Length of strategy code error!",
+        "desc": "组合策略代码长度错误。"
+    },
+    {
+        "errorcode": "11001130",
+        "errormsg": "Alloc combined margin param failed!",
+        "desc": "分配组合策略保证金参数失败。"
+    },
+    {
+        "errorcode": "11001131",
+        "errormsg": "Insert combined margin param failed!",
+        "desc": "插入组合策略保证金参数失败。"
+    },
+    {
+        "errorcode": "11001132",
+        "errormsg": "Alloc combined strategy failed!",
+        "desc": "分配组合策略信息失败。"
+    },
+    {
+        "errorcode": "11001133",
+        "errormsg": "Type of opt contract error!",
+        "desc": "合约认沽认购类型错误。"
+    },
+    {
+        "errorcode": "11001134",
+        "errormsg": "Side of opt contract error!",
+        "desc": "合约持仓方向错误。"
+    },
+    {
+        "errorcode": "11001135",
+        "errormsg": "Cover of opt contract error!",
+        "desc": "合约是否备兑错误。"
+    },
+    {
+        "errorcode": "11001136",
+        "errormsg": "Insert combined strategy failed!",
+        "desc": "插入组合策略信息失败。"
+    },
+    {
+        "errorcode": "11001137",
+        "errormsg": "Get contract asset failed!",
+        "desc": "获取合约持仓失败。"
+    },
+    {
+        "errorcode": "11001138",
+        "errormsg": "Get contract info failed!",
+        "desc": "获取合约信息失败。"
+    },
+    {
+        "errorcode": "11001139",
+        "errormsg": "Combined qty error!",
+        "desc": "合约持仓的已用于组合数量错误。"
+    },
+    {
+        "errorcode": "11001061",
+        "errormsg": "Get contract asset failed in combined execution!",
+        "desc": "行权合并获取合约持仓失败！"
+    },
+    {
+        "errorcode": "11001062",
+        "errormsg": "Get contract info failed in combined execution!",
+        "desc": "行权合并获取合约信息失败！"
+    },
+    {
+        "errorcode": "11001063",
+        "errormsg": "Get contract quote failed in combined execution!",
+        "desc": "行权合并获取合约行情失败！"
+    },
+    {
+        "errorcode": "11001064",
+        "errormsg": "Get margin rate failed in combined execution!",
+        "desc": "行权合并获取保证金参数失败！"
+    },
+    {
+        "errorcode": "11010001",
+        "errormsg": "Failed to asset check.",
+        "desc": "验资验券失败。"
+    },
+    {
+        "errorcode": "11010002",
+        "errormsg": "Warned in asset checking.",
+        "desc": "验资验券告警。"
+    },
+    {
+        "errorcode": "11010010",
+        "errormsg": "Invalid parameter in asset checking.",
+        "desc": "验资验券中参数无效。"
+    },
+    {
+        "errorcode": "11010011",
+        "errormsg": "Invalid capital parameter in calculating the cost of trading by transaction amount.",
+        "desc": "计算交易费用时金额参数无效。"
+    },
+    {
+        "errorcode": "11010012",
+        "errormsg": "Invalid side parameter in calculating the cost of trading by transaction amount.",
+        "desc": "计算交易费用时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010013",
+        "errormsg": "Invalid price type parameter in calculating the cost of trading by transaction amount",
+        "desc": "计算交易费用时价格参数无效。"
+    },
+    {
+        "errorcode": "11010014",
+        "errormsg": "Invalid quantity parameter in calculating the cost of trading by transaction amount.",
+        "desc": "计算交易费用时数量参数无效。"
+    },
+    {
+        "errorcode": "11010015",
+        "errormsg": "Invalid nominal price parameter in calculating the balance cost of trading.",
+        "desc": "计算交易费用差额时预扣价格参数无效。"
+    },
+    {
+        "errorcode": "11010016",
+        "errormsg": "Invalid nominal quantity parameter in calculating the balance cost of trading.",
+        "desc": "计算交易费用差额时预扣数量参数无效。"
+    },
+    {
+        "errorcode": "11010017",
+        "errormsg": "Invalid actual price parameter in calculating the balance cost of trading.",
+        "desc": "计算交易费用差额时实际成交价格参数无效。"
+    },
+    {
+        "errorcode": "11010018",
+        "errormsg": "Invalid actual quantity parameter in calculating the balance cost of trading.",
+        "desc": "计算交易费用差额时实际成交价格参数无效。"
+    },
+    {
+        "errorcode": "11010019",
+        "errormsg": "Invalid side parameter in calculating the balance cost of trading.",
+        "desc": "计算交易费用差额时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010020",
+        "errormsg": "Failed to get trade way info in calculating the cost of trading by transaction amount.",
+        "desc": "计算交易费用差额时委托方式参数无效。"
+    },
+    {
+        "errorcode": "11010021",
+        "errormsg": "Failed to get fee config in calculating the cost of trading by transaction amount.",
+        "desc": "根据成交回报计算交易费用时获取费率配置失败。"
+    },
+    {
+        "errorcode": "11010030",
+        "errormsg": "Invalid order parameter in calculating the cost of trading by transaction returns.",
+        "desc": "根据成交回报计算交易费用时订单参数无效。"
+    },
+    {
+        "errorcode": "11010031",
+        "errormsg": "Invalid action parameter in calculating the cost of trading by transaction returns.",
+        "desc": "根据成交回报计算交易费用时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010040",
+        "errormsg": "Invalid parameter in authority checking.",
+        "desc": "权限检查时参数无效。"
+    },
+    {
+        "errorcode": "11010041",
+        "errormsg": "Invalid customer status in authority checking.",
+        "desc": "权限检查时客户状态参数无效。"
+    },
+    {
+        "errorcode": "11010042",
+        "errormsg": "Invalid security status in authority checking.",
+        "desc": "权限检查时证券状态无效。"
+    },
+    {
+        "errorcode": "11010043",
+        "errormsg": "Invalid security limits in authority checking.",
+        "desc": "权限检查时证券限制无效。"
+    },
+    {
+        "errorcode": "11010044",
+        "errormsg": "Invalid security right in authority checking.",
+        "desc": "权限检查时证券权限无效。"
+    },
+    {
+        "errorcode": "11010046",
+        "errormsg": "Invalid fund trade right in authority checking.",
+        "desc": "权限检查时账户交易权限无效。"
+    },
+    {
+        "errorcode": "11010047",
+        "errormsg": "Invalid fund right in authority checking.",
+        "desc": "权限检查时账户权限无效。"
+    },
+    {
+        "errorcode": "11010048",
+        "errormsg": "Invalid bsflag in authority checking.",
+        "desc": "权限检查时账户买卖标识无效。"
+    },
+    {
+        "errorcode": "11010049",
+        "errormsg": "Invalid security type in authority checking.",
+        "desc": "权限检查时证券类型无效。"
+    },
+    {
+        "errorcode": "11010051",
+        "errormsg": "Security trade status is suspended.",
+        "desc": "证券为停牌状态。"
+    },
+    {
+        "errorcode": "11010060",
+        "errormsg": "Invalid action parameter in calculating the capital of new order request.",
+        "desc": "计算新订单请求资金时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010061",
+        "errormsg": "Invalid side parameter in calculating the capital of new order request.",
+        "desc": "计算新订单请求资金时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010062",
+        "errormsg": "Invalid price type parameter in calculating the capital of new order request.",
+        "desc": "计算新订单请求资金时价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010070",
+        "errormsg": "Invalid action parameter in calculating the capital of new order response.",
+        "desc": "计算订单响应资金时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010071",
+        "errormsg": "Invalid side parameter in calculating the capital of new order response.",
+        "desc": "计算订单响应资金时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010072",
+        "errormsg": "Invalid price type parameter in calculating the capital of new order response.",
+        "desc": "计算订单响应资金时价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010080",
+        "errormsg": "Invalid action parameter in calculating the capital of transaction returns.",
+        "desc": "计算成交回报资金时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010081",
+        "errormsg": "Invalid side parameter in calculating the capital of transaction returns.",
+        "desc": "计算成交回报资金时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010082",
+        "errormsg": "Invalid price type parameter in calculating the capital of transaction returns.",
+        "desc": "计算成交回报资金时价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010091",
+        "errormsg": "Invalid action parameter in calculating the capital of cancel order response.",
+        "desc": "计算撤单响应资金时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010092",
+        "errormsg": "Invalid side parameter in calculating the capital of cancel order response.",
+        "desc": "计算撤单响应资金时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010093",
+        "errormsg": "Invalid price type parameter in calculating the capital of cancel order response.",
+        "desc": "计算撤单响应资金时价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010100",
+        "errormsg": "Invalid config parameter in initialize of asset checking.",
+        "desc": "验资验券初始化时配置参数无效。"
+    },
+    {
+        "errorcode": "11010101",
+        "errormsg": "Failed to read double value in loading config of cost of trading.",
+        "desc": "加载交易费用配置时读取双精度值失败。"
+    },
+    {
+        "errorcode": "11010102",
+        "errormsg": "Invalid transaction fee rate of buy in configuration checking.",
+        "desc": "检查配置时买入成交费率无效。"
+    },
+    {
+        "errorcode": "11010103",
+        "errormsg": "Invalid transaction fee rate of sell in configuration checking.",
+        "desc": "检查配置时卖出成交费率无效。"
+    },
+    {
+        "errorcode": "11010104",
+        "errormsg": "Invalid minimum transaction fee of buy and sell in configuration checking.",
+        "desc": "检查配置时买入卖出交易费用最小值无效。"
+    },
+    {
+        "errorcode": "11010105",
+        "errormsg": "Invalid maximum transaction fee of buy and sell in configuration checking.",
+        "desc": "检查配置时买入卖出交易费用最大值无效。"
+    },
+    {
+        "errorcode": "11010106",
+        "errormsg": "Failed to read bool value in loading config of cost of trading.",
+        "desc": "加载交易费用配置时读取布尔值失败。"
+    },
+    {
+        "errorcode": "11010107",
+        "errormsg": "Invalid transaction fee rate of struct fund cteation in configuration checking.",
+        "desc": "检查配置时分级基金申购成交费率无效。"
+    },
+    {
+        "errorcode": "11010108",
+        "errormsg": "Invalid transaction fee rate of struct fund redemption in configuration checking.",
+        "desc": "检查配置时分级基金赎回成交费率无效。"
+    },
+    {
+        "errorcode": "11010110",
+        "errormsg": "Invalid action parameter of new order.",
+        "desc": "新订单的订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010111",
+        "errormsg": "Invalid quantity parameter of new order.",
+        "desc": "新订单的数量参数无效。"
+    },
+    {
+        "errorcode": "11010112",
+        "errormsg": "Invalid price parameter of new order.",
+        "desc": "新订单的价格参数无效。"
+    },
+    {
+        "errorcode": "11010113",
+        "errormsg": "Invalid side parameter of new order.",
+        "desc": "新订单的买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010114",
+        "errormsg": "Invalid business type parameter of new order.",
+        "desc": "新订单的业务类型参数无效。"
+    },
+    {
+        "errorcode": "11010115",
+        "errormsg": "Invalid price type parameter of new order.",
+        "desc": "新订单的价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010120",
+        "errormsg": "Available capital in account is insufficient.",
+        "desc": "账户可用资金不足。"
+    },
+    {
+        "errorcode": "11010121",
+        "errormsg": "Available positions in account is insufficient.",
+        "desc": "账户可用持仓不足。"
+    },
+    {
+        "errorcode": "11010122",
+        "errormsg": "The price goes beyond the limit of rise and fall.",
+        "desc": "价格超出涨跌停范围。"
+    },
+    {
+        "errorcode": "11010123",
+        "errormsg": "Invalid security quantity.",
+        "desc": "证券数量无效。"
+    },
+    {
+        "errorcode": "11010125",
+        "errormsg": "Available capital in account is insufficient(include amount of income).",
+        "desc": "账户可用资金不足(包含卖出所得资金)"
+    },
+    {
+        "errorcode": "11010126",
+        "errormsg": "Security quantity is out of limit.",
+        "desc": "证券数量超出范围。"
+    },
+    {
+        "errorcode": "11010127",
+        "errormsg": "Invalid price.",
+        "desc": "价格无效。"
+    },
+    {
+        "errorcode": "11010130",
+        "errormsg": "Invalid action parameter in rollbacking the order.",
+        "desc": "回滚订单的订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010131",
+        "errormsg": "Invalid quantity parameter in rollbacking the order.",
+        "desc": "回滚订单的数量参数无效。"
+    },
+    {
+        "errorcode": "11010132",
+        "errormsg": "Invalid price parameter in rollbacking the order.",
+        "desc": "回滚订单的价格参数无效。"
+    },
+    {
+        "errorcode": "11010133",
+        "errormsg": "Invalid side parameter in rollbacking the order.",
+        "desc": "回滚订单的买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010134",
+        "errormsg": "Invalid capital in rollbacking the new order.",
+        "desc": "回滚订单的金额参数无效。"
+    },
+    {
+        "errorcode": "11010135",
+        "errormsg": "Invalid business type parameter in rollbacking the order.",
+        "desc": "回滚订单的业务类型参数无效。"
+    },
+    {
+        "errorcode": "11010140",
+        "errormsg": "Invalid action parameter of order response.",
+        "desc": "订单响应的订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010141",
+        "errormsg": "Invalid quantity parameter of order response.",
+        "desc": "订单响应的数量参数无效。"
+    },
+    {
+        "errorcode": "11010142",
+        "errormsg": "Invalid price parameter of order response.",
+        "desc": "订单响应的价格参数无效。"
+    },
+    {
+        "errorcode": "11010143",
+        "errormsg": "Invalid side parameter of order response.",
+        "desc": "订单响应的买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010144",
+        "errormsg": "Invalid capital of order response.",
+        "desc": "订单响应的金额无效。"
+    },
+    {
+        "errorcode": "11010145",
+        "errormsg": "Invalid business type parameter of order response.",
+        "desc": "订单响应的业务类型参数无效。"
+    },
+    {
+        "errorcode": "11010150",
+        "errormsg": "Invalid action parameter of transaction returns.",
+        "desc": "成交回报的订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010151",
+        "errormsg": "Invalid order quantity parameter of transaction returns.",
+        "desc": "成交回报的数量参数无效。"
+    },
+    {
+        "errorcode": "11010152",
+        "errormsg": "Invalid order price parameter of transaction returns.",
+        "desc": "成交回报的价格参数无效。"
+    },
+    {
+        "errorcode": "11010153",
+        "errormsg": "Invalid side parameter of transaction returns.",
+        "desc": "成交回报的买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010154",
+        "errormsg": "Invalid price_type parameter of transaction returns.",
+        "desc": "成交回报的价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010155",
+        "errormsg": "Invalid report quantity parameter of transaction returns.",
+        "desc": "成交回报的成交数量参数无效。"
+    },
+    {
+        "errorcode": "11010156",
+        "errormsg": "Invalid report price parameter of transaction returns.",
+        "desc": "成交回报的成交价格参数无效。"
+    },
+    {
+        "errorcode": "11010157",
+        "errormsg": "Invalid capital of transaction returns.",
+        "desc": "成交回报的金额无效。"
+    },
+    {
+        "errorcode": "11010158",
+        "errormsg": "Invalid business type parameter of transaction returns.",
+        "desc": "成交回报的业务类型参数无效。"
+    },
+    {
+        "errorcode": "11010160",
+        "errormsg": "Invalid action parameter of cancel order response.",
+        "desc": "撤单响应的订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010161",
+        "errormsg": "Invalid quantity parameter of cancel order response.",
+        "desc": "撤单响应的数量参数无效。"
+    },
+    {
+        "errorcode": "11010162",
+        "errormsg": "Invalid price parameter of cancel order response.",
+        "desc": "撤单响应的价格参数无效。"
+    },
+    {
+        "errorcode": "11010163",
+        "errormsg": "Invalid side parameter of cancel order response.",
+        "desc": "撤单响应的买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010166",
+        "errormsg": "Invalid capital of cancel order response.",
+        "desc": "撤单响应的金额无效。"
+    },
+    {
+        "errorcode": "11010167",
+        "errormsg": "Invalid business type parameter of cancel order response.",
+        "desc": "撤单响应的业务类型参数无效。"
+    },
+    {
+        "errorcode": "11010170",
+        "errormsg": "Invalid action parameter in calculating the minimum capital of new sell order request.",
+        "desc": "计算卖出所得最小资金时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010171",
+        "errormsg": "Invalid side parameter in calculating the minimum capital of new sell order request.",
+        "desc": "计算卖出所得最小资金时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010172",
+        "errormsg": "Invalid price type parameter in calculating the minimum capital of new sell order request.",
+        "desc": "计算卖出所得最小资金时价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010180",
+        "errormsg": "Invalid action parameter in calculating the maximum capital of new order request.",
+        "desc": "计算订单蕴含最大金额时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11010181",
+        "errormsg": "Invalid side parameter in calculating the maximum capital of new order request.",
+        "desc": "计算订单蕴含最大金额时买卖方向参数无效。"
+    },
+    {
+        "errorcode": "11010182",
+        "errormsg": "Invalid price type parameter in calculating the maximum capital of new order request.",
+        "desc": "计算订单蕴含最大金额时价格类型参数无效。"
+    },
+    {
+        "errorcode": "11010191",
+        "errormsg": "Invalid divide status of struct fund.",
+        "desc": "分级基金的拆分状态无效。"
+    },
+    {
+        "errorcode": "11010192",
+        "errormsg": "Invalid security type of struct fund.",
+        "desc": "分级基金的证券状态无效。"
+    },
+    {
+        "errorcode": "11010193",
+        "errormsg": "Invalid main flag of struct fund.",
+        "desc": "分级基金的母基金标识无效。"
+    },
+    {
+        "errorcode": "11010200",
+        "errormsg": "Invalid replace type parameter in etf creation.",
+        "desc": "ETF申购时现金替代标识无效。"
+    },
+    {
+        "errorcode": "11010201",
+        "errormsg": "Failed to process cash forbidden stock in ETF creation.",
+        "desc": "ETF申购时处理禁止现金替代的成分股票失败。"
+    },
+    {
+        "errorcode": "11010202",
+        "errormsg": "Failed to process cash optional stock in ETF creation.",
+        "desc": "ETF申购时处理可现金替代的成分股票失败。"
+    },
+    {
+        "errorcode": "11010203",
+        "errormsg": "Cash ratio is overflow in ETF creation.",
+        "desc": "ETF申购时超过最大现金替代比例。"
+    },
+    {
+        "errorcode": "11010210",
+        "errormsg": "Invalid report type parameter of new order report.",
+        "desc": "成交回报的成交类型参数错误。"
+    },
+    {
+        "errorcode": "11010211",
+        "errormsg": "Invalid stock position in new order report.",
+        "desc": "成交回报的股票位置号错误。"
+    },
+    {
+        "errorcode": "11010212",
+        "errormsg": "Creation or redemption of etf is prohibited.",
+        "desc": "ETF申购或赎回被禁止。"
+    },
+    {
+        "errorcode": "11010213",
+        "errormsg": "Quantity of order is out of limit in etf creation or redemption.",
+        "desc": "订单委托数量超出ETF申购或赎回的限制。"
+    },
+    {
+        "errorcode": "11010214",
+        "errormsg": "Sum of quantity is out of limit in etf creation or redemption.",
+        "desc": "数量之和超出ETF申购或赎回的限制。"
+    },
+    {
+        "errorcode": "11010220",
+        "errormsg": "Invalid transaction fee rate of creation of ETF in configuration checking.",
+        "desc": "检查配置时ETF申购成交费率无效。"
+    },
+    {
+        "errorcode": "11010221",
+        "errormsg": "Invalid ftransaction fee rate rdemption of ETF in configuration checking.",
+        "desc": "检查配置时ETF赎回成交费率无效。"
+    },
+    {
+        "errorcode": "11010222",
+        "errormsg": "Invalid minimum transaction fee creation and redemption of ETF in configuration checking.",
+        "desc": "检查配置时ETF申购赎回成交费用最小值无效。"
+    },
+    {
+        "errorcode": "11010223",
+        "errormsg": "Invalid maximum  transaction fee of creation and redemption of ETF in configuration checking.",
+        "desc": "检查配置时ETF申购赎回成交费用最大值无效。"
+    },
+    {
+        "errorcode": "11010300",
+        "errormsg": "Failed to check cust_pos_right_limit in options trading.",
+        "desc": "期权合约买卖时检查账户权利仓持仓限额失败"
+    },
+    {
+        "errorcode": "11010301",
+        "errormsg": "Failed to check cust_pos_total_limit in options trading.",
+        "desc": "超过单账户该品种总持仓限额"
+    },
+    {
+        "errorcode": "11010302",
+        "errormsg": "Failed to check cust_pos_day_buy_limit in options trading.",
+        "desc": "期权合约买卖时检查账户当天买入开仓限额失败。"
+    },
+    {
+        "errorcode": "11010310",
+        "errormsg": "Failed to check node_pos_total_limit in options trading.",
+        "desc": "未通过节点限仓校验"
+    },
+    {
+        "errorcode": "11010320",
+        "errormsg": "Failed to check buy_amount_limit_open in options trading.",
+        "desc": "超过买开的总金额限制"
+    },
+    {
+        "errorcode": "11010330",
+        "errormsg": "Failed to check exercise date in options executive.",
+        "desc": "未通过行权日校验"
+    },
+    {
+        "errorcode": "11010340",
+        "errormsg": "Failed to force freeze amount.",
+        "desc": "强制冻结金额失败"
+    },
+    {
+        "errorcode": "11010350",
+        "errormsg": "Invalid transaction fee rate of open long position in configuration checking.",
+        "desc": "无效的买入开仓交易费率设置"
+    },
+    {
+        "errorcode": "11010351",
+        "errormsg": "Invalid transaction fee rate of sell put in configuration checking.",
+        "desc": "无效的卖出看跌期权的交易费率设置"
+    },
+    {
+        "errorcode": "11010352",
+        "errormsg": "Invalid transaction fee rate of open short position in configuration checking.",
+        "desc": "无效的买入平仓交易费率设置"
+    },
+    {
+        "errorcode": "11010353",
+        "errormsg": "Invalid transaction fee rate of buy put in configuration checking.",
+        "desc": "无效的买入看跌期权交易费率设置"
+    },
+    {
+        "errorcode": "11010354",
+        "errormsg": "Invalid transaction fee rate of exercise in configuration checking.",
+        "desc": "无效的行权交易费率设置"
+    },
+    {
+        "errorcode": "11010355",
+        "errormsg": "Invalid transaction fee rate of combined strategy merge in configuration checking.",
+        "desc": "无效的组合策略期权组合交易费率设置"
+    },
+    {
+        "errorcode": "11010356",
+        "errormsg": "Invalid transaction fee rate of combined strategy split in configuration checking.",
+        "desc": "无效的组合策略期权拆分交易费率设置"
+    },
+    {
+        "errorcode": "11010360",
+        "errormsg": "Invalid transaction fee rate of monetary fund creation in configuration checking.",
+        "desc": "无效的货币基金申购交易费率设置"
+    },
+    {
+        "errorcode": "11010361",
+        "errormsg": "Invalid transaction fee rate of monetary fund redemption in configuration checking.",
+        "desc": "无效的货币基金赎回费率设置"
+    },
+    {
+        "errorcode": "11010362",
+        "errormsg": "Invalid minimum transaction fee of monetary fund creation in configuration checking.",
+        "desc": "无效的货币基金申购最小费率设置"
+    },
+    {
+        "errorcode": "11010370",
+        "errormsg": "Invalid data charges of trade in configuration checking.",
+        "desc": "检查配置时成交流量费率无效。"
+    },
+    {
+        "errorcode": "11010371",
+        "errormsg": "Invalid data charges of other in configuration checking.",
+        "desc": "检查配置时其它流量费率无效。"
+    },
+    {
+        "errorcode": "11010400",
+        "errormsg": "Invalid transaction fee count rate of buy in configuration checking.",
+        "desc": "检查配置时买入数量费率无效。"
+    },
+    {
+        "errorcode": "11010401",
+        "errormsg": "Invalid transaction fee count rate of sell in configuration checking.",
+        "desc": "检查配置时卖出数量费率无效。"
+    },
+    {
+        "errorcode": "11010402",
+        "errormsg": "Invalid transaction fee count rate of etf creation in configuration checking.",
+        "desc": "检查配置时ETF申购的成分股票数量费率无效。"
+    },
+    {
+        "errorcode": "11010403",
+        "errormsg": "Invalid transaction fee count rate of etf rdemption in configuration checking.",
+        "desc": "检查配置时ETF赎回的成分股票数量费率无效。"
+    },
+    {
+        "errorcode": "11010411",
+        "errormsg": "The quantity of IPO order is not an integral multiple of the uint.",
+        "desc": "申购数量不为申购单位整数倍"
+    },
+    {
+        "errorcode": "11010412",
+        "errormsg": "The quantity of IPO order is beyond the scope.",
+        "desc": "新股申购数量超出范围。"
+    },
+    {
+        "errorcode": "11010413",
+        "errormsg": "quantity of IPO order exceeds the quota.",
+        "desc": "申购数量超出账户申购限额"
+    },
+    {
+        "errorcode": "11010500",
+        "errormsg": "Failed to check asset in credit business type.",
+        "desc": "信用业务验资验券失败"
+    },
+    {
+        "errorcode": "11010501",
+        "errormsg": "Failed to check credit concentration.",
+        "desc": "信用业务集中度校验失败"
+    },
+    {
+        "errorcode": "11010502",
+        "errormsg": "Failed to check credit cash position.",
+        "desc": "信用业务融资头寸校验失败"
+    },
+    {
+        "errorcode": "11010503",
+        "errormsg": "Failed to check credit stock position.",
+        "desc": "信用业务融券头寸校验失败"
+    },
+    {
+        "errorcode": "11010504",
+        "errormsg": "Failed to get credit cash position",
+        "desc": "信用业务融资头寸获取失败"
+    },
+    {
+        "errorcode": "11010505",
+        "errormsg": "Failed to get credit stock position.",
+        "desc": "信用业务融券头寸获取失败"
+    },
+    {
+        "errorcode": "11010507",
+        "errormsg": "Failed to check credit contract.",
+        "desc": "信用业务两融额度校验失败"
+    },
+    {
+        "errorcode": "11010508",
+        "errormsg": "Failed to check credit mainten rate.",
+        "desc": "信用业务委托维保比例校验失败"
+    },
+    {
+        "errorcode": "11010509",
+        "errormsg": "Invalid order quantity not equal to surplus quantity.",
+        "desc": "信用业务余券数量无效"
+    },
+    {
+        "errorcode": "11010510",
+        "errormsg": "Security concentrate higher.",
+        "desc": "柜台证券集中度校验失败"
+    },
+    {
+        "errorcode": "11010511",
+        "errormsg": "order quantity is higher than current position.",
+        "desc": "委托数量超出当前头寸数量"
+    },
+    {
+        "errorcode": "11010512",
+        "errormsg": "insufficient margin.",
+        "desc": "保证金可用余额不足"
+    },
+    {
+        "errorcode": "11010513",
+        "errormsg": "reduction limit.",
+        "desc": "证券减持限售余额不足"
+    },
+    {
+        "errorcode": "11010550",
+        "errormsg": "Credit debt module internal fail.",
+        "desc": "信用负债相关错误"
+    },
+    {
+        "errorcode": "11010551",
+        "errormsg": "Credit debt can not be found.",
+        "desc": "无法找到两融负债合约"
+    },
+    {
+        "errorcode": "11010552",
+        "errormsg": "Credit debt date not in extend range.",
+        "desc": "两融负债合约不在可展期日期范围"
+    },
+    {
+        "errorcode": "11010553",
+        "errormsg": "Credit debt cannot be extend twice.",
+        "desc": "两融负债合约不允许多次展期"
+    },
+    {
+        "errorcode": "11010560",
+        "errormsg": "Credit cash position used up.",
+        "desc": "融资头寸不足"
+    },
+    {
+        "errorcode": "11010561",
+        "errormsg": "Credit stock position used up.",
+        "desc": "融券头寸可用不足"
+    },
+    {
+        "errorcode": "11010562",
+        "errormsg": "Invalid market.",
+        "desc": "无效的市场"
+    },
+    {
+        "errorcode": "11010563",
+        "errormsg": "Stock not found in stock position.",
+        "desc": "在融券头寸中找不到目标证券"
+    },
+    {
+        "errorcode": "11010564",
+        "errormsg": "Credit contract used up.",
+        "desc": "两融授信额度不足"
+    },
+    {
+        "errorcode": "11010601",
+        "errormsg": "Invalid leg nums.",
+        "desc": "无效的成分合约数量。"
+    },
+    {
+        "errorcode": "11010602",
+        "errormsg": "Invalid leg plugin.",
+        "desc": "无效的成分合约信息。"
+    },
+    {
+        "errorcode": "11010603",
+        "errormsg": "Invalid combined strategy risk control info.",
+        "desc": "无效的组合策略风控信息。"
+    },
+    {
+        "errorcode": "11010604",
+        "errormsg": "Invalid strategy info.",
+        "desc": "无效的组合策略信息。"
+    },
+    {
+        "errorcode": "11010608",
+        "errormsg": "Invalid strategy type.",
+        "desc": "无效的组合策略类型。"
+    },
+    {
+        "errorcode": "11010609",
+        "errormsg": "Invalid combined asset.",
+        "desc": "无效的组合策略持仓。"
+    },
+    {
+        "errorcode": "11010610",
+        "errormsg": "Invalid exchange id.",
+        "desc": "无效的市场ID。"
+    },
+    {
+        "errorcode": "11010611",
+        "errormsg": "Combined strategy id is not in list.",
+        "desc": "组合策略ID在成分合约的列表中不存在。"
+    },
+    {
+        "errorcode": "11010612",
+        "errormsg": "Invalid combined strategy flag.",
+        "desc": "无效的组合策略标记。"
+    },
+    {
+        "errorcode": "11010613",
+        "errormsg": "Invalid contract asset of leg.",
+        "desc": "无效的成分合约持仓。"
+    },
+    {
+        "errorcode": "11010614",
+        "errormsg": "Invalid contract info of leg.",
+        "desc": "无效的成分合约信息。"
+    },
+    {
+        "errorcode": "11010615",
+        "errormsg": "Invalid type of contract asset.",
+        "desc": "无效的合约持仓认沽认购类型。"
+    },
+    {
+        "errorcode": "11010616",
+        "errormsg": "Invalid side of contract asset.",
+        "desc": "无效的合约持仓方向。"
+    },
+    {
+        "errorcode": "11010617",
+        "errormsg": "Invalid target security.",
+        "desc": "无效的标的券。"
+    },
+    {
+        "errorcode": "11010621",
+        "errormsg": "Invalid type of contract.",
+        "desc": "无效的合约认沽认购类型。"
+    },
+    {
+        "errorcode": "11010622",
+        "errormsg": "Invalid expire date of contract.",
+        "desc": "无效的合约到期日。"
+    },
+    {
+        "errorcode": "11010623",
+        "errormsg": "Invalid target code of contract.",
+        "desc": "无效的合约标的。"
+    },
+    {
+        "errorcode": "11010624",
+        "errormsg": "Invalid unit of contract.",
+        "desc": "无效的合约单位。"
+    },
+    {
+        "errorcode": "11010625",
+        "errormsg": "Invalid excecise price of contract.",
+        "desc": "无效的合约行权价。"
+    },
+    {
+        "errorcode": "11010626",
+        "errormsg": "Invalid expire leaving day of contract.",
+        "desc": "无效的合约距离行权日。"
+    },
+    {
+        "errorcode": "11010627",
+        "errormsg": "Invalid quantity of contract.",
+        "desc": "无效的合约数量。"
+    },
+    {
+        "errorcode": "11010631",
+        "errormsg": "Combined strategy id of leg 1 is not in list.",
+        "desc": "组合策略ID在成分合约1的列表中不存在。"
+    },
+    {
+        "errorcode": "11010632",
+        "errormsg": "Combined strategy id of leg 2 is not in list.",
+        "desc": "组合策略ID在成分合约2的列表中不存在。"
+    },
+    {
+        "errorcode": "11010633",
+        "errormsg": "Invalid combined strategy flag of leg 1.",
+        "desc": "无效的成分合约1的组合策略标记。"
+    },
+    {
+        "errorcode": "11010634",
+        "errormsg": "Invalid combined strategy flag of leg 2.",
+        "desc": "无效的成分合约2的组合策略标记。"
+    },
+    {
+        "errorcode": "11010635",
+        "errormsg": "Invalid contract asset of leg 1.",
+        "desc": "无效的成分合约1持仓。"
+    },
+    {
+        "errorcode": "11010636",
+        "errormsg": "Invalid contract asset of leg 2.",
+        "desc": "无效的成分合约2持仓。"
+    },
+    {
+        "errorcode": "11010637",
+        "errormsg": "Invalid contract info of leg 1.",
+        "desc": "无效的成分合约1信息。"
+    },
+    {
+        "errorcode": "11010638",
+        "errormsg": "Invalid contract info of leg 2.",
+        "desc": "无效的成分合约2信息。"
+    },
+    {
+        "errorcode": "11010639",
+        "errormsg": "Invalid contract asset type of leg 1.",
+        "desc": "无效的合约持仓1认沽认购类型。"
+    },
+    {
+        "errorcode": "11010640",
+        "errormsg": "Invalid contract asset type of leg 2.",
+        "desc": "无效的合约持仓2认沽认购类型。"
+    },
+    {
+        "errorcode": "11010641",
+        "errormsg": "Invalid contract asset side of leg 1.",
+        "desc": "无效的合约1持仓方向。"
+    },
+    {
+        "errorcode": "11010642",
+        "errormsg": "Invalid contract asset side of leg 2.",
+        "desc": "无效的合约2持仓方向。"
+    },
+    {
+        "errorcode": "11010643",
+        "errormsg": "Invalid contract type of leg 1.",
+        "desc": "无效的合约1认沽认购类型。"
+    },
+    {
+        "errorcode": "11010644",
+        "errormsg": "Invalid contract type of leg 2.",
+        "desc": "无效的合约2认沽认购类型。"
+    },
+    {
+        "errorcode": "11010645",
+        "errormsg": "Invalid expire leaving day of contract of leg 1.",
+        "desc": "无效的合约1距离行权日。"
+    },
+    {
+        "errorcode": "11010646",
+        "errormsg": "Invalid expire leaving day of contract of leg 2.",
+        "desc": "无效的合约2距离行权日。"
+    },
+    {
+        "errorcode": "11010647",
+        "errormsg": "Invalid target security of leg 1.",
+        "desc": "无效的合约1标的券。"
+    },
+    {
+        "errorcode": "11010648",
+        "errormsg": "Invalid target security of leg 2.",
+        "desc": "无效的合约2标的券。"
+    },
+    {
+        "errorcode": "11010661",
+        "errormsg": "Invalid leg nums in combined execution.",
+        "desc": "无效的行权合并成分合约数量。"
+    },
+    {
+        "errorcode": "11010662",
+        "errormsg": "Invalid leg info in combined execution.",
+        "desc": "无效的行权合并成分合约信息。"
+    },
+    {
+        "errorcode": "11010663",
+        "errormsg": "Invalid risk info in combined execution.",
+        "desc": "无效的行权合并风控信息。"
+    },
+    {
+        "errorcode": "11010668",
+        "errormsg": "Invalid contract asset in combined execution.",
+        "desc": "无效的行权合并合约持仓。"
+    },
+    {
+        "errorcode": "11010669",
+        "errormsg": "Invalid contract quote of combined execution.",
+        "desc": "无效的行权合并成分合约行情信息。"
+    },
+    {
+        "errorcode": "11010670",
+        "errormsg": "Invalid contract info in combined execution.",
+        "desc": "无效的行权合并成分合约信息。"
+    },
+    {
+        "errorcode": "11010671",
+        "errormsg": "Invalid target code of contract in combined execution.",
+        "desc": "无效的行权合并合约标的券代码。"
+    },
+    {
+        "errorcode": "11010672",
+        "errormsg": "Invalid unit of contract in combined execution.",
+        "desc": "无效的行权合并合约单位。"
+    },
+    {
+        "errorcode": "11010673",
+        "errormsg": "Invalid expire leaving day of contract in combined execution.",
+        "desc": "效的行权合并合约到期日。"
+    },
+    {
+        "errorcode": "11010674",
+        "errormsg": "Invalid type of contract in combined execution.",
+        "desc": "无效的行权合并合约类型。"
+    },
+    {
+        "errorcode": "11010675",
+        "errormsg": "Invalid excecise price of contract in combined execution.",
+        "desc": "无效的行权合并合约行权价。"
+    },
+    {
+        "errorcode": "11010680",
+        "errormsg": "Net postion is insufficient in combined execution.",
+        "desc": "行权合并权利仓净头寸不足。"
+    },
+    {
+        "errorcode": "11011001",
+        "errormsg": "Failed to risk check.",
+        "desc": "风控检查失败。"
+    },
+    {
+        "errorcode": "11011002",
+        "errormsg": "Warned in risk checking.",
+        "desc": "风控检查告警。"
+    },
+    {
+        "errorcode": "11011006",
+        "errormsg": "Failed to initialize mopool.",
+        "desc": "初始化内存池失败。"
+    },
+    {
+        "errorcode": "11011007",
+        "errormsg": "Number of account is zero.",
+        "desc": "账户数量为0。"
+    },
+    {
+        "errorcode": "11011010",
+        "errormsg": "Invalid parameter in risk checking.",
+        "desc": "风控检查时参数无效。"
+    },
+    {
+        "errorcode": "11011011",
+        "errormsg": "Invalid action parameter in risk checking of new order request.",
+        "desc": "风控检查新订单请求时action参数无效。"
+    },
+    {
+        "errorcode": "11011012",
+        "errormsg": "Invalid action parameter in the prepare of risk checking of new order request.",
+        "desc": "风控检查新订单请求预处理时action参数无效。"
+    },
+    {
+        "errorcode": "11011013",
+        "errormsg": "Invalid action parameter in the end of risk checking of new order request.",
+        "desc": "风控检查新订单请求结束时action参数无效。"
+    },
+    {
+        "errorcode": "11011020",
+        "errormsg": "Invalid account status in risk checking.",
+        "desc": "风控检查时账户风控状态无效。"
+    },
+    {
+        "errorcode": "11011021",
+        "errormsg": "Security hash table initialize failed in risk checking.",
+        "desc": "风控检查时初始化哈希表失败。"
+    },
+    {
+        "errorcode": "11011022",
+        "errormsg": "Security memory pool initialize failed in risk checking.",
+        "desc": "风控检查时初始化内存池表失败。"
+    },
+    {
+        "errorcode": "11011023",
+        "errormsg": "Invalid config of account in risk checking.",
+        "desc": "风控检查时账户风控配置无效。"
+    },
+    {
+        "errorcode": "11011024",
+        "errormsg": "Invalid default config of account in risk checking.",
+        "desc": "风控检查时账户默认风控配置无效。"
+    },
+    {
+        "errorcode": "11011025",
+        "errormsg": "Invalid config of security in risk checking.",
+        "desc": "风控检查时证券风控配置无效。"
+    },
+    {
+        "errorcode": "11011030",
+        "errormsg": "Invalid time_zone in checking config of system.",
+        "desc": "系统检查时时区配置无效。"
+    },
+    {
+        "errorcode": "11011031",
+        "errormsg": "Invalid time_from in checking config of system.",
+        "desc": "系统配置检查时起始时间无效。"
+    },
+    {
+        "errorcode": "11011032",
+        "errormsg": "Invalid time_to in checking config of system.",
+        "desc": "系统配置检查时终止时间无效。"
+    },
+    {
+        "errorcode": "11011033",
+        "errormsg": "Invalid stock_num_max in checking config of system.",
+        "desc": "系统配置检查时时区无效。"
+    },
+    {
+        "errorcode": "11011040",
+        "errormsg": "Invalid account config in risk checking of new order request.",
+        "desc": "风控检查新订单请求时账户风控配置无效。"
+    },
+    {
+        "errorcode": "11011041",
+        "errormsg": "Invalid account status in risk checking of new order request.",
+        "desc": "风控检查新订单请求时账户风控状态无效。"
+    },
+    {
+        "errorcode": "11011042",
+        "errormsg": "Invalid security status in risk checking of new order request.",
+        "desc": "风控检查新订单请求时证券风控状态无效。"
+    },
+    {
+        "errorcode": "11011050",
+        "errormsg": "Invalid account status in risk checking of cancel order request.",
+        "desc": "风控检查撤单请求时账户风控状态无效。"
+    },
+    {
+        "errorcode": "11011051",
+        "errormsg": "Invalid security status in risk checking of cancel order request.",
+        "desc": "风控检查撤单请求时证券风控状态无效。"
+    },
+    {
+        "errorcode": "11011060",
+        "errormsg": "Invalid action parameter in risk checking of new order response.",
+        "desc": "风控检查订单响应时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11011061",
+        "errormsg": "Invalid account status in risk checking of cancel order response.",
+        "desc": "风控检查成交回报时账户风控状态无效。"
+    },
+    {
+        "errorcode": "11011070",
+        "errormsg": "Invalid action parameter in risk checking of transaction returns.",
+        "desc": "风控检查成交回报时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11011080",
+        "errormsg": "Invalid action parameter in risk checking of cancel order response.",
+        "desc": "风控检查撤单响应时订单类型参数无效。"
+    },
+    {
+        "errorcode": "11011100",
+        "errormsg": "Invalid config in checking rule 1.",
+        "desc": "rule1风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011101",
+        "errormsg": "Invalid config in checking rule 2.",
+        "desc": "rule2风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011102",
+        "errormsg": "Invalid config in checking rule 9.",
+        "desc": "rule9风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011103",
+        "errormsg": "Invalid config in checking rule 10.",
+        "desc": "rule10风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011104",
+        "errormsg": "Invalid times config in checking rule 14.",
+        "desc": "rule14风控指标配置次数无效。"
+    },
+    {
+        "errorcode": "11011105",
+        "errormsg": "Invalid in_time config in checking rule 14.",
+        "desc": "rule14风控指标配置统计时间段无效。"
+    },
+    {
+        "errorcode": "11011106",
+        "errormsg": "Invalid brk_time config in checking rule 14.",
+        "desc": "rule14风控指标配置熔断时间无效。"
+    },
+    {
+        "errorcode": "11011107",
+        "errormsg": "Invalid brk_time that is smaller than in_time in checking rule 14.",
+        "desc": "rule1风控指标配置熔断时间小于统计时间段。"
+    },
+    {
+        "errorcode": "11011108",
+        "errormsg": "Invalid config in checking rule 19.",
+        "desc": "rule19风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011109",
+        "errormsg": "Invalid config in checking rule 20.",
+        "desc": "rule20风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011110",
+        "errormsg": "Invalid config in checking rule 25.",
+        "desc": "rule25风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011111",
+        "errormsg": "Invalid config in checking rule 26.",
+        "desc": "rule26风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011112",
+        "errormsg": "Invalid times config in checking rule 27.",
+        "desc": "rule27风控指标配置次数无效。"
+    },
+    {
+        "errorcode": "11011113",
+        "errormsg": "Invalid in_time config in checking rule 27.",
+        "desc": "rule27风控指标配置统计时间段无效。"
+    },
+    {
+        "errorcode": "11011114",
+        "errormsg": "Invalid brk_time config in checking rule 27.",
+        "desc": "rule27风控指标配置熔断时间无效。"
+    },
+    {
+        "errorcode": "11011115",
+        "errormsg": "brk_time is smaller than in_time in checking rule 27.",
+        "desc": "rule27风控指标配置熔断时间小于统计时间段。"
+    },
+    {
+        "errorcode": "11011116",
+        "errormsg": "Invalid times config in checking rule 38.",
+        "desc": "rule38风控指标配置次数无效。"
+    },
+    {
+        "errorcode": "11011117",
+        "errormsg": "Invalid in_time config in checking rule 38.",
+        "desc": "rule38风控指标配置统计时间段无效。"
+    },
+    {
+        "errorcode": "11011118",
+        "errormsg": "Invalid brk_time config in checking rule 38.",
+        "desc": "rule38风控指标配置熔断时间无效。"
+    },
+    {
+        "errorcode": "11011119",
+        "errormsg": "Invalid brk_time that is smaller than in_time in checking rule 38.",
+        "desc": "rule38风控指标配置熔断时间小于统计时间段。"
+    },
+    {
+        "errorcode": "11011120",
+        "errormsg": "Invalid config in checking rule 41.",
+        "desc": "rule41风控指标配置无效。"
+    },
+    {
+        "errorcode": "11011121",
+        "errormsg": "Invalid per config in checking rule 42.",
+        "desc": "rule42风控指标配置百分比无效。"
+    },
+    {
+        "errorcode": "11011122",
+        "errormsg": "Invalid cancel_num config in checking rule 42.",
+        "desc": "rule42风控指标配置撤单数量无效。"
+    },
+    {
+        "errorcode": "11011140",
+        "errormsg": "Invalid times config in checking rule 43.",
+        "desc": "rule43风控指标配置次数无效。"
+    },
+    {
+        "errorcode": "11011141",
+        "errormsg": "Invalid in_time config in checking rule 43.",
+        "desc": "rule43风控指标配置统计时间段无效。"
+    },
+    {
+        "errorcode": "11011142",
+        "errormsg": "Invalid brk_time config in checking rule 43.",
+        "desc": "rule43风控指标配置熔断时间无效。"
+    },
+    {
+        "errorcode": "11011143",
+        "errormsg": "Invalid brk_time that is smaller than in_time in checking rule 43.",
+        "desc": "rule43风控指标配置熔断时间小于统计时间段。"
+    },
+    {
+        "errorcode": "11011201",
+        "errormsg": "Failed to check risk rule 1.",
+        "desc": "风控指标rule1检查失败。"
+    },
+    {
+        "errorcode": "11011202",
+        "errormsg": "Failed to check risk rule 2.",
+        "desc": "风控指标rule2检查失败。"
+    },
+    {
+        "errorcode": "11011209",
+        "errormsg": "Failed to check risk rule 9.",
+        "desc": "风控指标rule9检查失败。"
+    },
+    {
+        "errorcode": "11011210",
+        "errormsg": "Failed to check risk rule 10.",
+        "desc": "风控指标rule10检查失败。"
+    },
+    {
+        "errorcode": "11011214",
+        "errormsg": "Failed to check risk rule 14.",
+        "desc": "风控指标rule14检查失败。"
+    },
+    {
+        "errorcode": "11011219",
+        "errormsg": "Failed to check risk rule 19.",
+        "desc": "风控指标rule19检查失败。"
+    },
+    {
+        "errorcode": "11011220",
+        "errormsg": "Failed to check risk rule 20.",
+        "desc": "风控指标rule20检查失败。"
+    },
+    {
+        "errorcode": "11011225",
+        "errormsg": "Failed to check risk rule 25.",
+        "desc": "风控指标rule25检查失败。"
+    },
+    {
+        "errorcode": "11011226",
+        "errormsg": "Failed to check risk rule 26.",
+        "desc": "风控指标rule26检查失败。"
+    },
+    {
+        "errorcode": "11011227",
+        "errormsg": "Failed to check risk rule 27.",
+        "desc": "风控指标rule27检查失败。"
+    },
+    {
+        "errorcode": "11011238",
+        "errormsg": "Failed to check risk rule 38.",
+        "desc": "风控指标rule38检查失败。"
+    },
+    {
+        "errorcode": "11011239",
+        "errormsg": "Failed to check risk rule 39.",
+        "desc": "风控指标rule39检查失败。"
+    },
+    {
+        "errorcode": "11011241",
+        "errormsg": "Failed to check risk rule 41.",
+        "desc": "风控指标rule41检查失败。"
+    },
+    {
+        "errorcode": "11011242",
+        "errormsg": "Failed to check risk rule 42.",
+        "desc": "风控指标rule42检查失败。"
+    },
+    {
+        "errorcode": "11011243",
+        "errormsg": "Failed to check risk rule 43.",
+        "desc": "风控指标rule43检查失败。"
+    },
+    {
+        "errorcode": "11011314",
+        "errormsg": "Enter rule 14 breaker.",
+        "desc": "进入风控指标rule14熔断。"
+    },
+    {
+        "errorcode": "11011327",
+        "errormsg": "Enter rule 27 breaker.",
+        "desc": "进入风控指标rule27熔断。"
+    },
+    {
+        "errorcode": "11011338",
+        "errormsg": "Enter rule 38 breaker.",
+        "desc": "进入风控指标rule38熔断。"
+    },
+    {
+        "errorcode": "11011343",
+        "errormsg": "Enter rule 43 breaker.",
+        "desc": "进入风控指标rule43熔断。"
+    },
+    {
+        "errorcode": "11011400",
+        "errormsg": "Invalid user id.",
+        "desc": "用户ID无效。"
+    },
+    {
+        "errorcode": "11011401",
+        "errormsg": "Invalid server id.",
+        "desc": "服务器ID无效。"
+    },
+    {
+        "errorcode": "11011402",
+        "errormsg": "Invalid input num.",
+        "desc": "输入数字无效。"
+    },
+    {
+        "errorcode": "11011403",
+        "errormsg": "Failed to connect to db.",
+        "desc": "连接数据库失败。"
+    },
+    {
+        "errorcode": "11011404",
+        "errormsg": "Failed to convert risk key.",
+        "desc": "转换风控键值失败。"
+    },
+    {
+        "errorcode": "11011405",
+        "errormsg": "Failed to match risk key.",
+        "desc": "检查风控键值失败。"
+    },
+    {
+        "errorcode": "11100000",
+        "errormsg": "exchange error code(深交所五位错误码)",
+        "desc": "在英文错误消息中,可能出现20009的错误码,为深交所返回；表示委托价格超过了涨跌幅限制,具体可以参考深交所文档。{+}http://www.szse.cn/marketServices/technicalservice/interface/+ 最新版的《深圳证券交易所Binary交易数据接口规范》文档"
+    },
+    {
+        "errorcode": "11100001",
+        "errormsg": "Allocate request message memory failed",
+        "desc": "内存池中内存分配失败"
+    },
+    {
+        "errorcode": "11100002",
+        "errormsg": "Invalid new Order request",
+        "desc": "无效新订单"
+    },
+    {
+        "errorcode": "11100003",
+        "errormsg": "Invalid cancel order request",
+        "desc": "无效撤单"
+    },
+    {
+        "errorcode": "11100004",
+        "errormsg": "System module loading failed",
+        "desc": "模块加载失败"
+    },
+    {
+        "errorcode": "11100005",
+        "errormsg": "Receice binary message from TGW failed",
+        "desc": "从TGW接受消息失败"
+    },
+    {
+        "errorcode": "11100006",
+        "errormsg": "Send binary message to TGW failed",
+        "desc": "发送消息到TGW失败"
+    },
+    {
+        "errorcode": "11100007",
+        "errormsg": "Offer config error",
+        "desc": "配置文件错误"
+    },
+    {
+        "errorcode": "11100008",
+        "errormsg": "Start platform failed",
+        "desc": "启动交易平台失败"
+    },
+    {
+        "errorcode": "11100009",
+        "errormsg": "Stop platform failed",
+        "desc": "停止交易平台失败"
+    },
+    {
+        "errorcode": "11100010",
+        "errormsg": "Start heartbeat thread failed",
+        "desc": "启动心跳机制失败"
+    },
+    {
+        "errorcode": "11100011",
+        "errormsg": "Stop heartbeat thread failed",
+        "desc": "停止心跳机制失败"
+    },
+    {
+        "errorcode": "11100012",
+        "errormsg": "Start receive thread failed",
+        "desc": "接受线程启动失败"
+    },
+    {
+        "errorcode": "11100013",
+        "errormsg": "Start send thread failed",
+        "desc": "发送线程启动失败"
+    },
+    {
+        "errorcode": "11100014",
+        "errormsg": "Connect to TGW failed",
+        "desc": "无法连接到TGW"
+    },
+    {
+        "errorcode": "11100015",
+        "errormsg": "Binary message inner error, Check length error",
+        "desc": "binary消息体长度检测错误"
+    },
+    {
+        "errorcode": "11100016",
+        "errormsg": "Binary message inner error, Check sum error",
+        "desc": "binary消息体校验错误"
+    },
+    {
+        "errorcode": "11100017",
+        "errormsg": "Binary message size too large",
+        "desc": "binary消息体过大"
+    },
+    {
+        "errorcode": "11100018",
+        "errormsg": "Unsupport binary message",
+        "desc": "当前不支持的binary消息体"
+    },
+    {
+        "errorcode": "11100019",
+        "errormsg": "Invalid order status",
+        "desc": "无效的订单状态"
+    },
+    {
+        "errorcode": "11100020",
+        "errormsg": "Invalid order price type",
+        "desc": "无效的价格类型"
+    },
+    {
+        "errorcode": "11100021",
+        "errormsg": "Invalid side type",
+        "desc": "无效的买卖类型"
+    },
+    {
+        "errorcode": "11100022",
+        "errormsg": "Exchange id error",
+        "desc": "错误的交易所编号"
+    },
+    {
+        "errorcode": "11100023",
+        "errormsg": "Business reject",
+        "desc": "TGW的业务拒绝消息"
+    },
+    {
+        "errorcode": "11100024",
+        "errormsg": "TGW disconnected",
+        "desc": "TGW的连接断开"
+    },
+    {
+        "errorcode": "11100025",
+        "errormsg": "Enter daemon mode failed",
+        "desc": "进入守护进程模式失败"
+    },
+    {
+        "errorcode": "11100026",
+        "errormsg": "Invalid Platform State",
+        "desc": "无效的平台状态(盘前,交易中,盘中,盘后)"
+    },
+    {
+        "errorcode": "11100027",
+        "errormsg": "Fast buffer malloc memory failed",
+        "desc": "fast buffer 内存分配失败"
+    },
+    {
+        "errorcode": "11100028",
+        "errormsg": "Invalid market order",
+        "desc": "无效的市场订单"
+    },
+    {
+        "errorcode": "11100029",
+        "errormsg": "No cache orig new order",
+        "desc": "没有缓存原始订单"
+    },
+    {
+        "errorcode": "11100030",
+        "errormsg": "TGW Platform have closed",
+        "desc": "交易平台关闭"
+    },
+    {
+        "errorcode": "11100031",
+        "errormsg": "Encode TGW message fail",
+        "desc": "binary消息体编码失败"
+    },
+    {
+        "errorcode": "11100032",
+        "errormsg": "Duplicate ID in the new order prepare cache",
+        "desc": "缓存中的订单重复"
+    },
+    {
+        "errorcode": "11100033",
+        "errormsg": "Duplicate new order id",
+        "desc": "重复的新订单号"
+    },
+    {
+        "errorcode": "11100034",
+        "errormsg": "Duplicate cancel order id",
+        "desc": "重复的撤单号"
+    },
+    {
+        "errorcode": "11100035",
+        "errormsg": "Original new order is not exist",
+        "desc": "原始新订单不存在"
+    },
+    {
+        "errorcode": "11100036",
+        "errormsg": "New order cannot be canceled in prepare cache",
+        "desc": "缓存中的原始新订单无法被撤销"
+    },
+    {
+        "errorcode": "11100037",
+        "errormsg": "New order in prepare cache send timeout",
+        "desc": "缓存中的新订单发送超时"
+    },
+    {
+        "errorcode": "11110000",
+        "errormsg": "exchange error code(上交所错误码)",
+        "desc": "在英文错误消息中,可能出现203这种类似的错误码,为上交所返回；具体可以参考上交所文档。http://www.sse.com.cn/services/tradingservice/tradingtech/technical/other/"
+    },
+    {
+        "errorcode": "11110001",
+        "errormsg": "Invalid new order request!",
+        "desc": "新订单解析失败"
+    },
+    {
+        "errorcode": "11110002",
+        "errormsg": "Can't get new order pack!",
+        "desc": "新订单获取失败"
+    },
+    {
+        "errorcode": "11110003",
+        "errormsg": "Invalid cancel order request!",
+        "desc": "撤单解析失败"
+    },
+    {
+        "errorcode": "11110004",
+        "errormsg": "Can't get cancel order pack!",
+        "desc": "新订单获取失败"
+    },
+    {
+        "errorcode": "11110005",
+        "errormsg": "Not in trade time!",
+        "desc": "不在交易时间内"
+    },
+    {
+        "errorcode": "11110006",
+        "errormsg": "Invalid order type!",
+        "desc": "订单类型错误"
+    },
+    {
+        "errorcode": "11110007",
+        "errormsg": "Release resp/report pack failed!",
+        "desc": "释放回应包失败"
+    },
+    {
+        "errorcode": "11110008",
+        "errormsg": "Read config failed!",
+        "desc": "配置文件读取失败"
+    },
+    {
+        "errorcode": "11110009",
+        "errormsg": "Initialize moudle failed!",
+        "desc": "Module无法初始化"
+    },
+    {
+        "errorcode": "11110010",
+        "errormsg": "Initialize manager failed!",
+        "desc": "Manager无法初始化"
+    },
+    {
+        "errorcode": "11110011",
+        "errormsg": "Start manager failed!",
+        "desc": "Manager无法启动"
+    },
+    {
+        "errorcode": "11110012",
+        "errormsg": "Open queue failed!",
+        "desc": "初始化队列失败"
+    },
+    {
+        "errorcode": "11110013",
+        "errormsg": "Close queue failed!",
+        "desc": "关闭队列失败"
+    },
+    {
+        "errorcode": "11111000",
+        "errormsg": "Add service insert order failed!",
+        "desc": "注册新订单服务失败"
+    },
+    {
+        "errorcode": "11111001",
+        "errormsg": "Add service cancel order failed!",
+        "desc": "注册撤单服务失败"
+    },
+    {
+        "errorcode": "11111002",
+        "errormsg": "Add service query order failed!",
+        "desc": "注册查询服务失败"
+    },
+    {
+        "errorcode": "11111004",
+        "errormsg": "Reg release newOrder confirm pack failed!",
+        "desc": "注册订单确认释放服务失败"
+    },
+    {
+        "errorcode": "11111005",
+        "errormsg": "Reg release newOrder confirm pack failed!",
+        "desc": "注册订单确认释放服务失败"
+    },
+    {
+        "errorcode": "11111006",
+        "errormsg": "Reg release cancelOrder confirm pack failed!",
+        "desc": "注册撤单确认释放服务失败"
+    },
+    {
+        "errorcode": "11111007",
+        "errormsg": "Reg release tradereport pack failed!",
+        "desc": "注册成交回报释放服务失败"
+    },
+    {
+        "errorcode": "11111008",
+        "errormsg": "",
+        "desc": "注册查询XtpID服务失败"
+    },
+    {
+        "errorcode": "11112000",
+        "errormsg": "Invalid DB login string!",
+        "desc": "数据库连接语句错误"
+    },
+    {
+        "errorcode": "11112001",
+        "errormsg": "DB disconnected!",
+        "desc": "数据库连接中断"
+    },
+    {
+        "errorcode": "11112002",
+        "errormsg": "Execute Sql string failed!",
+        "desc": "Sql语句执行失败"
+    },
+    {
+        "errorcode": "11112003",
+        "errormsg": "DB login failed!",
+        "desc": "数据库登录失败"
+    },
+    {
+        "errorcode": "11113000",
+        "errormsg": "Get cancelorder id failed!",
+        "desc": "未能读取本次撤单的rec_num 交易所尚处理到待撤单"
+    },
+    {
+        "errorcode": "11113001",
+        "errormsg": "Already internal cancelled!",
+        "desc": "已经被内部撤单了"
+    },
+    {
+        "errorcode": "11113002",
+        "errormsg": "Order confirm failed!",
+        "desc": "订单/撤单申报确认失败"
+    },
+    {
+        "errorcode": "11113003",
+        "errormsg": "Neworder error pack failed!",
+        "desc": "组装新订单失败包错误"
+    },
+    {
+        "errorcode": "11113004",
+        "errormsg": "Cancelorder error pack failed!",
+        "desc": "组装撤单失败包错误"
+    },
+    {
+        "errorcode": "11113005",
+        "errormsg": "Orig order not confirmed!",
+        "desc": "当前时间段不允许内部撤单(原始订单尚未确认)"
+    },
+    {
+        "errorcode": "11113006",
+        "errormsg": "Send pack failed!",
+        "desc": "调用add_push_data失败"
+    },
+    {
+        "errorcode": "11113007",
+        "errormsg": "Set original xtpid fail!",
+        "desc": "撤单时设置原始订单号失败"
+    },
+    {
+        "errorcode": "11113008",
+        "errormsg": "Repeated order!",
+        "desc": "本笔订单为之前未查询到的订单重复下单"
+    },
+    {
+        "errorcode": "11113009",
+        "errormsg": "Get db prefix fall!",
+        "desc": "从数据库获取prefix失败"
+    },
+    {
+        "errorcode": "11113010",
+        "errormsg": "",
+        "desc": "非内部撤单时间段"
+    },
+    {
+        "errorcode": "11113011",
+        "errormsg": "Get prefix sequence failed!",
+        "desc": "获取prefix的seq失败"
+    },
+    {
+        "errorcode": "11113012",
+        "errormsg": "Can not find original order!",
+        "desc": "撤单时找不到原始订单"
+    },
+    {
+        "errorcode": "11113013",
+        "errormsg": "Invalid XTP_ID!",
+        "desc": "XTP_ID有误"
+    },
+    {
+        "errorcode": "11113014",
+        "errormsg": "Invalid offer side!",
+        "desc": "买卖方向错误"
+    },
+    {
+        "errorcode": "11113015",
+        "errormsg": "Invalid order quantity!",
+        "desc": "订单数量错误"
+    },
+    {
+        "errorcode": "11113016",
+        "errormsg": "Invalid position effect!",
+        "desc": "错误的position effect"
+    },
+    {
+        "errorcode": "11113017",
+        "errormsg": "Internal test order!",
+        "desc": "内部测试订单"
+    },
+    {
+        "errorcode": "11113018",
+        "errormsg": "Prefix out of range!",
+        "desc": "Prefix超出范围"
+    },
+    {
+        "errorcode": "11113019",
+        "errormsg": "Update Read Flag Failed！",
+        "desc": "更新read_flag错误"
+    },
+    {
+        "errorcode": "11113020",
+        "errormsg": "Invalid pbu config!",
+        "desc": "pbu以及pbu_type未定义"
+    },
+    {
+        "errorcode": "11113021",
+        "errormsg": "Invalid busi type!",
+        "desc": "无效的busitype"
+    },
+    {
+        "errorcode": "11113022",
+        "errormsg": "",
+        "desc": "待定"
+    },
+    {
+        "errorcode": "11113023",
+        "errormsg": "Prefix Not Exist!",
+        "desc": "没找到Prefix"
+    },
+    {
+        "errorcode": "11113024",
+        "errormsg": "Check Prefixes Failed !",
+        "desc": "检查Prefix失败"
+    },
+    {
+        "errorcode": "11113025",
+        "errormsg": "Set Prefix Cache Failed",
+        "desc": "缓存prefix失败"
+    },
+    {
+        "errorcode": "11114000",
+        "errormsg": "exchange error code(上交所流式报盘错误码)",
+        "desc": "交易所拒单,为上交所返回；具体可以参考上交所文档,链接里http://www.sse.com.cn/services/tradingtech/data/ 找交易网关Binary接口规格说明书里的最新的errorcode表"
+    },
+    {
+        "errorcode": "11114001",
+        "errormsg": "Allocate request message memory failed",
+        "desc": "内存池中内存分配失败"
+    },
+    {
+        "errorcode": "11114002",
+        "errormsg": "Invalid new Order request",
+        "desc": "无效新订单"
+    },
+    {
+        "errorcode": "11114003",
+        "errormsg": "Invalid cancel order request",
+        "desc": "无效撤单"
+    },
+    {
+        "errorcode": "11114004",
+        "errormsg": "System module loading failed",
+        "desc": "模块加载失败"
+    },
+    {
+        "errorcode": "11114005",
+        "errormsg": "Receice binary message from TDGW failed",
+        "desc": "从TDGW接受消息失败"
+    },
+    {
+        "errorcode": "11114006",
+        "errormsg": "Send binary message to TDGW failed",
+        "desc": "发送消息到TDGW失败"
+    },
+    {
+        "errorcode": "11114007",
+        "errormsg": "Offer config error",
+        "desc": "配置文件错误"
+    },
+    {
+        "errorcode": "11114008",
+        "errormsg": "Start platform failed",
+        "desc": "启动交易平台失败"
+    },
+    {
+        "errorcode": "11114009",
+        "errormsg": "Stop platform failed",
+        "desc": "停止交易平台失败"
+    },
+    {
+        "errorcode": "11114010",
+        "errormsg": "Start heartbeat thread failed",
+        "desc": "启动心跳机制失败"
+    },
+    {
+        "errorcode": "11114011",
+        "errormsg": "Stop heartbeat thread failed",
+        "desc": "停止心跳机制失败"
+    },
+    {
+        "errorcode": "11114012",
+        "errormsg": "Start receive thread failed",
+        "desc": "接受线程启动失败"
+    },
+    {
+        "errorcode": "11114013",
+        "errormsg": "Start send thread failed",
+        "desc": "发送线程启动失败"
+    },
+    {
+        "errorcode": "11114014",
+        "errormsg": "Connect to TDGW failed",
+        "desc": "无法连接到TDGW"
+    },
+    {
+        "errorcode": "11114015",
+        "errormsg": "Binary message inner error, Check length error",
+        "desc": "binary消息体长度检测错误"
+    },
+    {
+        "errorcode": "11114016",
+        "errormsg": "Binary message inner error, Check sum error",
+        "desc": "binary消息体校验错误"
+    },
+    {
+        "errorcode": "11114017",
+        "errormsg": "Binary message size too large",
+        "desc": "binary消息体过大"
+    },
+    {
+        "errorcode": "11114018",
+        "errormsg": "Unsupport binary message",
+        "desc": "当前不支持的binary消息体"
+    },
+    {
+        "errorcode": "11114019",
+        "errormsg": "Invalid order status",
+        "desc": "无效的订单状态"
+    },
+    {
+        "errorcode": "11114020",
+        "errormsg": "Invalid order price type",
+        "desc": "无效的价格类型"
+    },
+    {
+        "errorcode": "11114021",
+        "errormsg": "Invalid side type",
+        "desc": "无效的买卖类型"
+    },
+    {
+        "errorcode": "11114022",
+        "errormsg": "Exchange id error",
+        "desc": "错误的交易所编号"
+    },
+    {
+        "errorcode": "11114023",
+        "errormsg": "Business reject",
+        "desc": "TDGW的业务拒绝消息"
+    },
+    {
+        "errorcode": "11114024",
+        "errormsg": "TDGW disconnected",
+        "desc": "TDGW的连接断开"
+    },
+    {
+        "errorcode": "11114025",
+        "errormsg": "Enter daemon mode failed",
+        "desc": "进入守护进程模式失败"
+    },
+    {
+        "errorcode": "11114026",
+        "errormsg": "Invalid Platform State",
+        "desc": "无效的平台状态(盘前,交易中,盘中,盘后)"
+    },
+    {
+        "errorcode": "11114027",
+        "errormsg": "Fast buffer malloc memory failed fast buffer",
+        "desc": "内存分配失败"
+    },
+    {
+        "errorcode": "11114028",
+        "errormsg": "Invalid market order",
+        "desc": "无效的市场订单"
+    },
+    {
+        "errorcode": "11114029",
+        "errormsg": "No cache orig new order",
+        "desc": "没有缓存原始订单"
+    },
+    {
+        "errorcode": "11114030",
+        "errormsg": "TDGW Platform have closed",
+        "desc": "交易平台关闭"
+    },
+    {
+        "errorcode": "11114031",
+        "errormsg": "Encode TDGW message fail",
+        "desc": "binary消息体编码失败"
+    },
+    {
+        "errorcode": "11114032",
+        "errormsg": "Duplicate ID in the new order prepare cache",
+        "desc": "缓存中的订单重复"
+    },
+    {
+        "errorcode": "11114033",
+        "errormsg": "Duplicate new order id",
+        "desc": "重复的新订单号"
+    },
+    {
+        "errorcode": "11114034",
+        "errormsg": "Duplicate cancel order id",
+        "desc": "重复的撤单号"
+    },
+    {
+        "errorcode": "11114035",
+        "errormsg": "Original new order is not exist",
+        "desc": "原始新订单不存在"
+    },
+    {
+        "errorcode": "11114036",
+        "errormsg": "New order cannot be canceled in prepare cache",
+        "desc": "缓存中的原始新订单无法被撤销"
+    },
+    {
+        "errorcode": "11114037",
+        "errormsg": "New order in prepare cache send timeout",
+        "desc": "缓存中的新订单发送超时"
+    },
+    {
+        "errorcode": "11114038",
+        "errormsg": "Order cache flush into disk fail",
+        "desc": "缓存中的订单写入硬盘失败"
+    },
+    {
+        "errorcode": "11114039",
+        "errormsg": "Invalid offer type in new order",
+        "desc": "无效的订单类型"
+    },
+    {
+        "errorcode": "11114040",
+        "errormsg": "Init info from database fail",
+        "desc": "数据库初始化失败"
+    },
+    {
+        "errorcode": "11114041",
+        "errormsg": "Find xtp id by ogw id fail",
+        "desc": "找不到ogw id对应的xtp id"
+    },
+    {
+        "errorcode": "11114042",
+        "errormsg": "Stock suspension",
+        "desc": "股票停牌"
+    },
+    {
+        "errorcode": "11114043",
+        "errormsg": "Store precache order into disk fail",
+        "desc": "缓存中的订单写入硬盘失败"
+    },
+    {
+        "errorcode": "11114044",
+        "errormsg": "Cancel order fail by TDGW",
+        "desc": "TDGW拒绝撤单"
+    },
+    {
+        "errorcode": "11114045",
+        "errormsg": "TDGW platform is not open",
+        "desc": "TDGW平台没开放"
+    },
+    {
+        "errorcode": "11114046",
+        "errormsg": "Test live order",
+        "desc": "测试新订单"
+    },
+    {
+        "errorcode": "11114047",
+        "errormsg": "Scoped mark init fail",
+        "desc": "打点模块初始化失败"
+    },
+    {
+        "errorcode": "11114048",
+        "errormsg": "Invalid appid in cancel order",
+        "desc": "无效的撤单APP ID"
+    },
+    {
+        "errorcode": "11114049",
+        "errormsg": "Decode TDGW message fail",
+        "desc": "解码TDGW消息失败"
+    },
+    {
+        "errorcode": "11114050",
+        "errormsg": "Append msg into queue fail",
+        "desc": "消息加入队列失败"
+    },
+    {
+        "errorcode": "11114051",
+        "errormsg": "Init etf sequence dat fail",
+        "desc": "插入ETF序列数据失败"
+    },
+    {
+        "errorcode": "11114052",
+        "errormsg": "Lost the order for system error",
+        "desc": "该订单未发送给TDGW"
+    },
+    {
+        "errorcode": "11114053",
+        "errormsg": "Start orderstat exec fail",
+        "desc": "开始订单统计模块失败"
+    },
+    {
+        "errorcode": "11114054",
+        "errormsg": "Stop orderstat exec fail",
+        "desc": "停止订单统计模块失败"
+    },
+    {
+        "errorcode": "11114055",
+        "errormsg": "TDGW of the pbu id not found",
+        "desc": "PBUID未找到"
+    },
+    {
+        "errorcode": "11114056",
+        "errormsg": "Platform not be restored yet",
+        "desc": "平台尚未恢复"
+    },
+    {
+        "errorcode": "11114057",
+        "errormsg": "Exec id filter insertion fail",
+        "desc": "Exec id插入失败"
+    },
+    {
+        "errorcode": "11114058",
+        "errormsg": "Exec report index sync fail",
+        "desc": "执行报告序号同步失败"
+    },
+    {
+        "errorcode": "11114059",
+        "errormsg": "Invalid Position Effect",
+        "desc": "无效的开平标志"
+    },
+    {
+        "errorcode": "11114060",
+        "errormsg": "Invalid Business Type",
+        "desc": "无效的业务类型"
+    },
+    {
+        "errorcode": "11114061",
+        "errormsg": "Invalid Order Qty",
+        "desc": "无效的委托数量"
+    },
+    {
+        "errorcode": "11115001",
+        "errormsg": "Can't get new order pack!",
+        "desc": "新订单获取失败"
+    },
+    {
+        "errorcode": "11115002",
+        "errormsg": "Release resp/report pack failed!",
+        "desc": "释放回应包失败"
+    },
+    {
+        "errorcode": "11115003",
+        "errormsg": "Read config failed!",
+        "desc": "配置文件读取失败"
+    },
+    {
+        "errorcode": "11115004",
+        "errormsg": "Initialize moudle failed!",
+        "desc": "Module无法初始化"
+    },
+    {
+        "errorcode": "11115005",
+        "errormsg": "Initialize manager failed!",
+        "desc": "Manager无法初始化"
+    },
+    {
+        "errorcode": "11115006",
+        "errormsg": "Start manager failed!",
+        "desc": "Manager无法启动"
+    },
+    {
+        "errorcode": "11115007",
+        "errormsg": "Open queue failed!",
+        "desc": "初始化队列失败"
+    },
+    {
+        "errorcode": "11115008",
+        "errormsg": "Close queue failed!",
+        "desc": "关闭队列失败"
+    },
+    {
+        "errorcode": "11115009",
+        "errormsg": "Can't get cancel order pack!",
+        "desc": "撤单获取失败"
+    },
+    {
+        "errorcode": "11115100",
+        "errormsg": "Add service insert order failed!",
+        "desc": "注册新订单服务失败"
+    },
+    {
+        "errorcode": "11115101",
+        "errormsg": "",
+        "desc": "注册查询XtpID服务失败"
+    },
+    {
+        "errorcode": "11115102",
+        "errormsg": "Add service order event failed!",
+        "desc": "注册订单事件服务失败"
+    },
+    {
+        "errorcode": "11115103",
+        "errormsg": "Add service order report failed!",
+        "desc": "注册成交回报服务失败"
+    },
+    {
+        "errorcode": "11115104",
+        "errormsg": "Reg release newOrder confirm pack failed!",
+        "desc": "注册订单确认释放服务失败"
+    },
+    {
+        "errorcode": "11115105",
+        "errormsg": "",
+        "desc": "注册查询XtpID服务失败"
+    },
+    {
+        "errorcode": "11115200",
+        "errormsg": "Invalid DB login string!",
+        "desc": "数据库连接语句错误"
+    },
+    {
+        "errorcode": "11115201",
+        "errormsg": "Execute Sql string failed!",
+        "desc": "Sql语句执行失败"
+    },
+    {
+        "errorcode": "11115202",
+        "errormsg": "DB login failed!",
+        "desc": "数据库登录失败"
+    },
+    {
+        "errorcode": "11115203",
+        "errormsg": "",
+        "desc": "调用add_push_data失败"
+    },
+    {
+        "errorcode": "11115204",
+        "errormsg": "",
+        "desc": "重复的xtpid"
+    },
+    {
+        "errorcode": "11115205",
+        "errormsg": "Repeated order event!",
+        "desc": "重复的order_event"
+    },
+    {
+        "errorcode": "11115206",
+        "errormsg": "Repeated order report!",
+        "desc": "重复的report"
+    },
+    {
+        "errorcode": "11115300",
+        "errormsg": "Unallowed security type!",
+        "desc": "不允许的证券类型"
+    },
+    {
+        "errorcode": "11115301",
+        "errormsg": "Total Capital Rete Error!",
+        "desc": "可投资股票总股本占比"
+    },
+    {
+        "errorcode": "11115302",
+        "errormsg": "Circ Capital Rate Error!",
+        "desc": "可投资股票流通股占比"
+    },
+    {
+        "errorcode": "11115303",
+        "errormsg": "Security Inv Rate Error!",
+        "desc": "单只股票投资额的资产净值占比"
+    },
+    {
+        "errorcode": "11115304",
+        "errormsg": "Bond Inv Rate Error!",
+        "desc": "单只债券投资额的资产净值占比"
+    },
+    {
+        "errorcode": "11115305",
+        "errormsg": "Bond Scale Rate Error!",
+        "desc": "单只债券投资额的债券发行规模占比"
+    },
+    {
+        "errorcode": "11115306",
+        "errormsg": "Bond Min Grade Error!",
+        "desc": "可买债券的最低评级"
+    },
+    {
+        "errorcode": "11115307",
+        "errormsg": "Same Bond Inv Rate Error!",
+        "desc": "同一发债主体债券投资额的资产净值占比"
+    },
+    {
+        "errorcode": "11115308",
+        "errormsg": "Total Bond Inv Rate Error!",
+        "desc": "投资于债券的投资总额的资产净值占比"
+    },
+    {
+        "errorcode": "11115309",
+        "errormsg": "Unsupported security type!",
+        "desc": "不支持的证券类型"
+    },
+    {
+        "errorcode": "11115400",
+        "errormsg": "Fund Hold Rate Error!",
+        "desc": "非货币基金持有比例的资产净值占比"
+    },
+    {
+        "errorcode": "11115401",
+        "errormsg": "Fund Inv Rate Error!",
+        "desc": "单只非货币基金股票投资额的资产净值占比"
+    },
+    {
+        "errorcode": "11115402",
+        "errormsg": "Money Fund Hold Rate Error!",
+        "desc": "货币基金持有比例的资产净值占比"
+    },
+    {
+        "errorcode": "11115403",
+        "errormsg": "Money Fund Inv Rate Error!",
+        "desc": "单只货币基金投资额的资产净值占比"
+    },
+    {
+        "errorcode": "11115404",
+        "errormsg": "Money Fund Scale Rate Error!",
+        "desc": "货币基金的基金总规模占比"
+    },
+    {
+        "errorcode": "11115405",
+        "errormsg": "Expiration Date Error!",
+        "desc": "距离届满日的天数"
+    },
+    {
+        "errorcode": "11115406",
+        "errormsg": "Invalid Fund Account!",
+        "desc": "错误的资金账号"
+    },
+    {
+        "errorcode": "11115407",
+        "errormsg": "Invalid Security Position!",
+        "desc": "错误的持仓信息"
+    },
+    {
+        "errorcode": "11115408",
+        "errormsg": "Already Reach Open Line!",
+        "desc": "已经达到平仓线,不允许买入"
+    },
+    {
+        "errorcode": "11115409",
+        "errormsg": "This Stock Not In White List!",
+        "desc": "不在白名单内的证券"
+    },
+    {
+        "errorcode": "11115410",
+        "errormsg": "Can not find white list!",
+        "desc": "该资金账号没有白名单"
+    },
+    {
+        "errorcode": "11115411",
+        "errormsg": "This Stock In Blacklist!",
+        "desc": "该证券是黑名单证券"
+    },
+    {
+        "errorcode": "11115412",
+        "errormsg": "Can not load security config!",
+        "desc": "获取不到证券信息"
+    },
+    {
+        "errorcode": "11115413",
+        "errormsg": "Can not find security in DB data!",
+        "desc": "数据库中没有这个证券信息"
+    },
+    {
+        "errorcode": "11115500",
+        "errormsg": "Can not find fund position data!",
+        "desc": "找不到资金账号持仓数据"
+    },
+    {
+        "errorcode": "11115501",
+        "errormsg": "Preopen Security Inv Rate Error!",
+        "desc": "盘前风控单只股票投资额超标"
+    },
+    {
+        "errorcode": "11115502",
+        "errormsg": "Preopen Total Pos Error!",
+        "desc": "盘前风控单只股票总股本超标"
+    },
+    {
+        "errorcode": "11115503",
+        "errormsg": "Preopen Circ Pos Error!",
+        "desc": "盘前风控单只股票流通股本超标"
+    },
+    {
+        "errorcode": "11115504",
+        "errormsg": "Invalid Security Status!",
+        "desc": "非法的股票状态(ST、*ST等)"
+    },
+    {
+        "errorcode": "11115505",
+        "errormsg": "Margin Trade Is Banned!",
+        "desc": "不允许融资买入"
+    },
+    {
+        "errorcode": "11115506",
+        "errormsg": "Short Sell Is Banned!",
+        "desc": "不允许融券卖出"
+    },
+    {
+        "errorcode": "11115507",
+        "errormsg": "Total Industry Inv Rate Error!",
+        "desc": "行业集中度(超出单行业投资总额的限制)"
+    },
+    {
+        "errorcode": "11115600",
+        "errormsg": "GEM Total Capital Rate Error",
+        "desc": "可投资股票总股本占比            -- 创业板"
+    },
+    {
+        "errorcode": "11115601",
+        "errormsg": "GEM Circ Capital Rate Error",
+        "desc": "可投资股票流通股占比            -- 创业板"
+    },
+    {
+        "errorcode": "11115602",
+        "errormsg": "GEM Security Inv Rate Error",
+        "desc": "单只股票投资额的资产净值占比    -- 创业板"
+    },
+    {
+        "errorcode": "11115603",
+        "errormsg": "Tech_Gem Total Capital Rate Error",
+        "desc": "可投资股票总股本占比            -- 科创板以及创业板"
+    },
+    {
+        "errorcode": "11115604",
+        "errormsg": "Tech_Gem Circ Capital Rate Error",
+        "desc": "可投资股票流通股占比            -- 科创板以及创业板"
+    },
+    {
+        "errorcode": "11115605",
+        "errormsg": "Tech_Gem Security Inv Rate Error!",
+        "desc": "单只股票投资额的资产净值占比    -- 科创板以及创业板"
+    },
+    {
+        "errorcode": "11115606",
+        "errormsg": "Tech_Gem Total Inv Rate Error!",
+        "desc": "科创板及创业板投资总金额        -- 科创板以及创业板"
+    },
+    {
+        "errorcode": "11115607",
+        "errormsg": "ETF Purchase not support!",
+        "desc": "不支持ETF申赎"
+    },
+    {
+        "errorcode": "11115608",
+        "errormsg": "No IPO Right!",
+        "desc": "无新股申购权限"
+    },
+    {
+        "errorcode": "11115609",
+        "errormsg": "No AllotMent Right!",
+        "desc": "无配股配债权限"
+    },
+    {
+        "errorcode": "11115610",
+        "errormsg": "Failed to pass admin review!  (Admin Failed To Pass The Audit!)",
+        "desc": "订单管理人审核未通过"
+    },
+    {
+        "errorcode": "11115611",
+        "errormsg": "Failed to pass trader review!  (Trader Failed To Pass The Audit!)",
+        "desc": "订单交易员审核未通过"
+    },
+    {
+        "errorcode": "11115612",
+        "errormsg": "Failed to pass Auto &T review!  (Auto And Trader Failed To Pass The Audit!)",
+        "desc": "自动审核未通过,订单交易员审核未通过"
+    },
+    {
+        "errorcode": "11115613",
+        "errormsg": "Failed to pass auto review!  (Auto Failed To Pass The Audit!)",
+        "desc": "自动审核未通过,订单交易员审核通过"
+    },
+    {
+        "errorcode": "11115614",
+        "errormsg": "Failed to check riskx rule1.",
+        "desc": "(Mom Anti Knock Error!)"
+    },
+    {
+        "errorcode": "11115615",
+        "errormsg": "Failed to check riskx rule2.",
+        "desc": "(Mom Reverse Trade Error!)"
+    },
+    {
+        "errorcode": "11115616",
+        "errormsg": "Failed to check riskx rule3.",
+        "desc": "(Mom Fundacc No Buy Right!!)"
+    },
+    {
+        "errorcode": "11115617",
+        "errormsg": "Failed to check riskx rule4.",
+        "desc": "(Mom All Day Reverse Trade Error!)"
+    },
+    {
+        "errorcode": "11115618",
+        "errormsg": "Failed to check riskx rule5.",
+        "desc": "(Asset Unit Reverse Trade Error!)"
+    },
+    {
+        "errorcode": "11115619",
+        "errormsg": "Failed to check riskx rule6.",
+        "desc": "(Asset Unit All Day Reverse Trade Error!)"
+    },
+    {
+        "errorcode": "11115620",
+        "errormsg": "Failed to check riskx rule7.",
+        "desc": "(Asset Unit Self Trade Error!)"
+    },
+    {
+        "errorcode": "11115621",
+        "errormsg": "Failed to check riskx rule8or9.",
+        "desc": "(Fund Acc Stock In Reverse Trade Black List,Forbid Trade!)"
+    },
+    {
+        "errorcode": "11115622",
+        "errormsg": "Failed to check riskx rule10.",
+        "desc": "(Cancel Order Per Exceed,Forbid Cancel Ordr!)"
+    },
+    {
+        "errorcode": "11200001",
+        "errormsg": "unknown date type",
+        "desc": "未知数据类型"
+    },
+    {
+        "errorcode": "11200002",
+        "errormsg": "unknown exchange type",
+        "desc": "未知交易所(目前只支持上交所和深交所)"
+    },
+    {
+        "errorcode": "11200003",
+        "errormsg": "unknown ticker id",
+        "desc": "未知证券代码"
+    },
+    {
+        "errorcode": "11200004",
+        "errormsg": "subscribe failed",
+        "desc": "注册订阅失败"
+    },
+    {
+        "errorcode": "11200005",
+        "errormsg": "unSubscribe failed",
+        "desc": "取消订阅失败"
+    },
+    {
+        "errorcode": "11200006",
+        "errormsg": "api have no right",
+        "desc": "API无权限"
+    },
+    {
+        "errorcode": "11200007",
+        "errormsg": "api request frequently",
+        "desc": "API请求太频繁"
+    },
+    {
+        "errorcode": "11200008",
+        "errormsg": "not find resource",
+        "desc": "找不到资源"
+    },
+    {
+        "errorcode": "11200009",
+        "errormsg": "api request param error",
+        "desc": "API传入参数错误"
+    },
+    {
+        "errorcode": "11200010",
+        "errormsg": "user not exist",
+        "desc": "用户不存在"
+    },
+    {
+        "errorcode": "11200011",
+        "errormsg": "password error",
+        "desc": "用户密码错误"
+    },
+    {
+        "errorcode": "11200012",
+        "errormsg": "unsupport api",
+        "desc": "不支持的API"
+    },
+    {
+        "errorcode": "11200013",
+        "errormsg": "user in blacklist",
+        "desc": "用户在黑名单中"
+    },
+    {
+        "errorcode": "11210100",
+        "errormsg": "resource not enough",
+        "desc": "资源不足"
+    },
+    {
+        "errorcode": "11210101",
+        "errormsg": "can't find resource",
+        "desc": "找不到资源"
+    },
+    {
+        "errorcode": "11210102",
+        "errormsg": "array index out of range",
+        "desc": "下标或索引越界"
+    },
+    {
+        "errorcode": "11210103",
+        "errormsg": "checksum failed",
+        "desc": "当前数据包校验和错误"
+    },
+    {
+        "errorcode": "11210200",
+        "errormsg": "package date not complete",
+        "desc": "待解析的数据包不完整"
+    },
+    {
+        "errorcode": "11210201",
+        "errormsg": "parse fast-package failed",
+        "desc": "解析数据包失败"
+    },
+    {
+        "errorcode": "11210202",
+        "errormsg": "parse fast-package field failed",
+        "desc": "解码字段错误"
+    },
+    {
+        "errorcode": "11210203",
+        "errormsg": "pmap is incorrect",
+        "desc": "解码FAST存在图错误"
+    },
+    {
+        "errorcode": "11210204",
+        "errormsg": "parse binary-package failed",
+        "desc": "解析深交所binary数据错误"
+    },
+    {
+        "errorcode": "11600001",
+        "errormsg": "KESB connect failed",
+        "desc": "KESB连接失败"
+    },
+    {
+        "errorcode": "11600002",
+        "errormsg": "KESB login failed",
+        "desc": "KESB登录失败,通常为密码错误或者密码错误次数过多导致账号被锁定,需要解锁后尝试"
+    },
+    {
+        "errorcode": "11600003",
+        "errormsg": "KESB operate failed",
+        "desc": "KESB操作失败"
+    }
+]
