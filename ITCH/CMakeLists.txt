@@ -109,9 +109,13 @@ include_directories(
 
 file(GLOB SOURCES
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
-    "${PROJECT_SOURCE_DIR}/src/kafka/*.cpp"
-    "${PROJECT_SOURCE_DIR}/src/Toolkit/*.cpp"
-    "${PROJECT_SOURCE_DIR}/src/utility/*.cpp"         
+
+    "${PROJECT_SOURCE_DIR}/proto_api/src/kafka/*.cpp"
+        "${PROJECT_SOURCE_DIR}/proto_api/src/Toolkit/*.cpp"
+        "${PROJECT_SOURCE_DIR}/proto_api/src/utility/*.cpp"
+        "${PROJECT_SOURCE_DIR}/proto_api/src/*.cpp"
+
+             
     )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -119,6 +123,7 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME}
     PUBLIC 
     ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/proto_api/include
     /opt/homebrew/include
     )
 

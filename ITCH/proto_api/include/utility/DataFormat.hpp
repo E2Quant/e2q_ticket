@@ -44,11 +44,14 @@
 
 #ifndef DATAFORMAT_INC
 #define DATAFORMAT_INC
+#include <array>
 #include <atomic>
 #include <cstddef>
 #include <cstdint>
+#include <cstdio>
+#include <map>
 #include <string>
-#include <thread>
+#include <utility>
 
 #include "Toolkit/UtilTime.hpp"
 #include "kafka/protocol/nbo.hpp"
@@ -74,9 +77,113 @@ struct AutoIncrement {
         SeqType def = E2QCfiStart;
         _storeId.store(def, std::memory_order_release);
     }
+
+private:
     std::atomic_int64_t _storeId;  //
-    std::thread::id _tid;          // std::thread::id
 }; /* ----------  end of struct AutoIncrement  ---------- */
+
+typedef std::pair<std::uint64_t, std::uint64_t> Tick_t;
+/*
+ * ================================
+ *        Class:  TicketLoop
+ *  Description:
+ * ================================
+ */
+template <std::size_t LEN = 10>
+class TicketLoop {
+public:
+    /* =============  LIFECYCLE     =================== */
+    TicketLoop(std::uint8_t inter) : _interval(inter) {}; /* constructor */
+
+    /* =============  ACCESSORS     =================== */
+
+    /* =============  MUTATORS      =================== */
+    /**
+     * the first is index
+     */
+    void addSymbol(std::string symbol)
+    {
+        std::array<std::pair<std::uint64_t, std::uint64_t>, LEN> datas;
+        if (_data.count(symbol) == 0) {
+            printf("init symbol:%s  inter:%d \n", symbol.c_str(), _interval);
+            _data.insert({symbol, datas});
+            _size++;
+        }
+    }
+
+    void TickTime(_millisecond misec)
+    {
+        _millisecond _misec = misec - _interval;
+        if (_misec > _ticket_time) {
+            _ticket_time = _misec;
+            _add_update = true;
+        }
+        else {
+            _add_update = false;
+        }
+    }
+    _millisecond TickTime() { return _ticket_time; }
+
+    SeqType push(std::string symbol, std::uint64_t price, std::uint64_t shares)
+    {
+        if (_data.count(symbol) == 0) {
+            printf("DataFormat error symbol:", symbol.c_str());
+            return 0;
+        }
+        SeqType id = 0;
+        if (_add_update) {
+            id = _writed.StoreId();
+        }
+        else {
+            id = _writed.Id();
+        }
+        std::size_t idx = id % LEN;
+
+        _data[symbol][idx] = std::make_pair(price, shares);
+        return id;
+    }
+    std::size_t size() { return _size; }
+    std::size_t idx()
+    {
+        SeqType id = _writed.Id() - 1;
+        if (id < 0) {
+            return 0;
+        }
+        return id % LEN;
+    }
+    int get(std::string symbol, Tick_t &data, std::size_t idx)
+    {
+        if (_data.count(symbol) == 0 || idx >= LEN) {
+            return -1;
+        }
+
+        data = _data.at(symbol)[idx];
+        return 0;
+    }
+    /* =============  OPERATORS     =================== */
+
+protected:
+    /* =============  METHODS       =================== */
+
+    /* =============  DATA MEMBERS  =================== */
+
+private:
+    /* =============  METHODS       =================== */
+
+    /* =============  DATA MEMBERS  =================== */
+    // symbol -> {price, shares}
+    std::map<std::string, std::array<Tick_t, LEN>> _data;
+
+    // true add , false update
+    bool _add_update = true;
+    // millisecond
+    std::uint8_t _interval;
+
+    _millisecond _ticket_time = 0;
+    AutoIncrement _writed{0};
+    std::size_t _size = 0;
+}; /* -----  end of class TicketLoop  ----- */
+
 /*
  * ================================
  *        Class:  DataFormat

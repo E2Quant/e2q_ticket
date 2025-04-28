@@ -79,7 +79,7 @@ _millisecond UtilTime::strtostamp(std::string timestr, const char *fmt)
     std::tm tm = {};
     const char *snext = strptime(timestr.c_str(), fmt, &tm);
     if (snext == NULL) {
-        //       log::echo("snext is null");
+        printf("snext is null\n");
         return 0;
     }
 

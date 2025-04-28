@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  Log.cpp
+ *       Filename:  nbo.hpp
  *
- *    Description:  Log
+ *    Description:  nbo
  *
  *        Version:  1.0
- *        Created:  2022年08月16日 14时39分59秒
+ *        Created:  2025/02/21 16时42分53秒
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -38,37 +38,68 @@
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
  * =====================================================================================
  */
-#include "Log.hpp"
+
+#ifndef NBO_INC
+#define NBO_INC
+#include <cmath>
+#include <cstddef>
+#include <cstdint>
 namespace e2q {
-namespace log {
 
-std::string format(const char* fmt, ...)
+#define BUFF_SIZE 8192
+#define TimeStampSize 4
+
+#ifdef NUMBER_DECI
+inline double_t _deci = NUMBER_DECI;
+#else
+/**
+ * 精度
+ */
+static std::size_t _scale = 4;
+inline double_t _deci = std::pow(10, _scale);
+#endif
+
+#define fldsiz(name, field) (sizeof(((struct name*)0)->field))
+
+#define E2QCfiStart 0
+
+template <typename T, std::size_t N = 0>
+size_t parse_uint_t(const void* buffer, T& value)
 {
-    std::string result;
+    std::size_t len = sizeof(T);
+    size_t next = len - 1 - N;
 
-    va_list ap;
-    va_start(ap, fmt);
-
-    char* tmp = 0;
-    int res = vasprintf(&tmp, fmt, ap);
-    va_end(ap);
-
-    if (res != -1) {
-        result = tmp;
-        if (tmp != nullptr) {
-            free(tmp);
+    for (size_t m = 0; m < len; m++) {
+        if (m >= (len - N)) {
+            ((uint8_t*)&value)[m] = 0;
+        }
+        else {
+            ((uint8_t*)&value)[m] = ((const uint8_t*)buffer)[next];
+            next--;
         }
     }
-    else {
-        // The vasprintf call failed, either do nothing and
-        // fall through (will return empty string) or
-        // throw an exception, if your code uses those
+
+    return (len - N);
+}
+
+/**
+ * to data
+ */
+template <typename T, std::size_t N = 0>
+size_t serialize_uint_t(void* buffer, T& value)
+{
+    std::size_t len = sizeof(T) - N;
+    std::size_t next = len - 1;
+    for (size_t m = 0; m < len; m++) {
+        ((uint8_t*)buffer)[m] = ((uint8_t*)&value)[next];
+        next--;
     }
 
-    return result;
+    return len;
 }
-}  // namespace log
-}  // namespace e2q
 
+}  // namespace e2q
+#endif /* ----- #ifndef NBO_INC  ----- */

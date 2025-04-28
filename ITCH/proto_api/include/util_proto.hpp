@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  Log.hpp
+ *       Filename:  util_zts.hpp
  *
- *    Description:  Log
+ *    Description:  util_zts
  *
  *        Version:  1.0
- *        Created:  2022年08月16日 14时38分20秒
+ *        Created:  2025/01/23 17时24分55秒
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -42,63 +42,36 @@
  * =====================================================================================
  */
 
-#ifndef LOG_INC
-#define LOG_INC
-#include <unistd.h>
+#ifndef UTIL_ZTS_INC
+#define UTIL_ZTS_INC
+#include <array>
+#include <cstdint>
+#include <functional>
 
-#include <cstdarg>
-#include <cstdio>
-#include <iostream>
-#include <sstream>
-#include <string>
-
-#include "Colors.hpp"
 namespace e2q {
-namespace log {
-template <class T>
-T base_name(T const &path, T const &delims = "/\\")
-{
-    return path.substr(path.find_last_of(delims) + 1);
-}
-template <class T>
-T remove_extension(T const &filename)
-{
-    typename T::size_type const p(filename.find_last_of('.'));
-    return p > 0 && p != T::npos ? filename.substr(0, p) : filename;
-}
-/* template <typename T> */
-/* void logError(const T &message, const char *file, const int line); */
-
-/*
- * ===  FUNCTION  =============================
- *
- *         Name:  logError
- *  ->  void *
- *  Parameters:
- *  - size_t  arg
- *  Description:
- *
- * ============================================
+/**
+ * 类型
  */
+// typedef int64_t SeqType;
 
-template <typename... Args>
-void log_cout(const char *file, const char *functionName, long lineNumber,
-              std::string color, Args &&...args)
-{
-    std::cout << KCYN << getpid() << "=>[" << base_name(std::string(file))
-              << "::" << functionName << " line." << lineNumber << "] " << RST
-              << color;
-    (std::cout << ... << args) << RST << std::endl;
-}
+/**
+ * OMS Quote FeedData
+ */
+enum Trading {
+    t_time = 0,
+    t_frame,
+    t_side,
+    t_qty,
+    t_price,
+    t_msg,
+    t_stock,
+    t_adjprice
+}; /* ----------  end of enum Trading  ---------- */
 
-#define echo(...) log_cout(__FILE__, __FUNCTION__, __LINE__, KBLU, __VA_ARGS__);
-#define bug(...) log_cout(__FILE__, __FUNCTION__, __LINE__, KRED, __VA_ARGS__);
-#define info(...) log_cout(__FILE__, __FUNCTION__, __LINE__, KGRN, __VA_ARGS__);
-#define debug(...) \
-    log_cout(__FILE__, __PRETTY_FUNCTION__, __LINE__, KORG, __VA_ARGS__);
+typedef enum Trading Trading;
+#define trading_protocols 8
 
-std::string format(const char *fmt, ...) __attribute__((format(printf, 1, 2)));
+using TradType = std::function<void(std::array<int64_t, trading_protocols>&)>;
 
-}  // namespace log
 }  // namespace e2q
-#endif /* ----- #ifndef LOG_INC  ----- */
+#endif /* ----- #ifndef UTIL_ZTS_INC  ----- */
