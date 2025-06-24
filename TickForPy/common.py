@@ -4,29 +4,27 @@
 # @Author  : vyouzhi
 # @File    : common.py
 # @Software: PyCharm
-
-import enum
-import pandas as pd
-
-from loguru import logger
-from kafka import KafkaProducer
-
-from time import sleep
 import os
-from datetime import datetime
 import struct
+
+import pandas as pd
+from kafka import KafkaProducer
+from loguru import logger
 
 
 class MsgType:
     INIT = b'I'
     XDXR = b'X'
     TICK = b'T'
+    CUSTOM = b'C'
     EXIT = b'E'
     LOG = b'L'
 
 
 class Aligned:
+    # 进行中
     UNDER = b'U'
+    # 完成
     PULL = b'P'
 
 
@@ -35,10 +33,17 @@ class InitType:
     TRADE = b't'
 
 
+class CmType:
+    UINT16 = b'6'
+    UINT32 = b'2'
+    UINT64 = b'4'
+
+
 class SystemInitMessage:
     '''
     初始化的
     '''
+
     def __init__(self):
         self._mt = MsgType()
         self._it = InitType()
@@ -61,7 +66,7 @@ class SystemInitMessage:
 
     def Stock(self, symbol, cficode):
 
-        if isinstance(symbol, bytearray) == False:
+        if not isinstance(symbol, bytearray):
             self.stock = symbol.encode('utf-8')
         else:
             self.stock = symbol
@@ -72,7 +77,8 @@ class SystemInitMessage:
         self.anligned = self._al.UNDER
 
     def toString(self):
-        data = struct.pack("!c8sIcIc", self.msgtype, self.stock[:8],
+        # logger.info(self.stock)
+        data = struct.pack("!c9sIcIc", self.msgtype, self.stock[:8],
                            self.cficode, self.itype, self.offer_time, self.anligned)
         return data
 
@@ -94,8 +100,8 @@ class DataFormatProto(BaseMessage):
     fmt = cIH8sIH
     '''
 
-    def __init__(self, symId=1, tick_time=0.05):
-      # 自己定义 id
+    def __init__(self, symId=0, tick_time=0.05):
+        # 自己定义 id
         self._symId = symId
         # 当前一笔 ticket 报价有多少个 symbol
         self._tick_num = 0
@@ -109,61 +115,95 @@ class DataFormatProto(BaseMessage):
         self.init_data = SystemInitMessage()
 
     def IndexCfiCode(self):
+        '''
+        指数代码
+        '''
         return 0
 
     def thash(self):
+        '''
+        cfi code index
+        '''
         self._symId = self._symId + 1
         return self._symId
 
     def add_symbol(self, sym):
+        '''
+        订阅 symbol
+
+        '''
         symId = self.thash()
 
         self.init_data.Stock(sym, symId)
         data = self.init_data.toString()
-
+        # logger.info(symId)
         return (symId, data)
 
-    def Index(self,  index_code):
+    def Index(self, index_code):
+        '''
+        转成 二进制 char
+        '''
         offer_time = int(self._tick_sleep_time * self._number_deci)
-        print(offer_time)
+        # print(offer_time)
         self.init_data.Index(index_code, offer_time)
         data = self.init_data.toString()
         return data
 
     def pExit(self):
+        '''
+
+        退出
+        '''
         data = struct.pack("!c", MsgType.EXIT)
         return data
 
 
 class StockAXdxrMessage(BaseMessage):
-    def __init__(self,  xdxr=True):
-        self._idxdxr = xdxr
+    def __init__(self):
+
         self._mt = MsgType()
         self._al = Aligned()
+        self._dir = "./xdxr/"
 
         # 转成整数
         self._number_deci = BaseMessage.number_deci
 
-    def xdxr(self, kpush, sym, symId, days, init):
-        """
-        如果发现没有数据的话， mootdx bestip -v 这样来更新一下线路
-        A 股的分红除权
-        :return:
-        """
-        if self._idxdxr == False:
-            return
+    def update(self, sym):
+        '''
 
+        '''
 
+        if sym[:3] == "sh0":
+            logger.info(sym)
+            return None
 
-        xdxr_file =  sym + ".csv"
-        file_exit = os.path.isfile(xdxr_file)
+        if len(sym) > 6:
+            sym = sym[2:]
 
+        if sym[1] not in ['0', '6']:
+            return None
+
+        xdxr_hdf5 = self._dir + sym + "_xdxr.hdf5"
+
+        if not os.path.isdir(self._dir):
+            os.makedirs(self._dir)
+
+        store = pd.HDFStore(xdxr_hdf5, 'a')
         data = None
-        if file_exit:
-            data = pd.read_csv(xdxr_file)
+        if len(store.keys()) > 0:
+            data = store.select('data')
         else:
-            logger.bug("dd")
-            return
+            logger.error("xdxr sym:%s , not found", sym)
+
+        store.close()
+
+        return data
+
+    def getData(self, sym, days, init):
+        data = self.update(sym)
+        if data is None or data.empty:
+            logger.error("xdxr code %s, data is none" % (sym))
+            return None
 
         if init == 0:
             data_row = data[data.years <= days]
@@ -171,18 +211,37 @@ class StockAXdxrMessage(BaseMessage):
             data_row = data[data.years == days]
 
         if len(data_row.index) == 0:
+            return None
+
+        return data_row
+
+    def xdxr(self, kpush, sym, symId, days, init):
+        """
+        A 股的分红除权
+        :return:
+        """
+
+        data_row = self.getData(sym, days, init)
+        if data_row is None:
+            # logger.error("sym:%s, days:%d, init:%d" % (sym, days, init))
             return
-
-        # print(data_row.head(3))
-
+        ## 10 送 xx.xx
+        uint = 10
         for index, row in data_row.iterrows():
+            fenhong = row['fenhong']
 
-            fenhong = int(self._number_deci * row['fenhong'])
-            songzhuangu = int(self._number_deci * row['songzhuangu'])
+            ## 倍数
+            songzhuangu = row['songzhuangu']
+
+            fenhong = int(self._number_deci * fenhong)
+            songzhuangu = int(self._number_deci * songzhuangu)
+            # logger.info("%d %d" % (fenhong, songzhuangu))
 
             # outstanding,outstandend,mrketCaping
-            data = struct.pack("!cIHHHHIIIIIc", self._mt.XDXR, symId,
-                               row['year'], row['month'], row['day'], row['category'], fenhong, songzhuangu, 0, 0, 0, self._al.PULL)
+            data = struct.pack("!cIHHHHIIIIIHc", self._mt.XDXR, symId,
+                               row['year'], row['month'], row['day'], row['category'], fenhong, songzhuangu, 0, 0, 0,
+                               uint,
+                               self._al.PULL)
             kpush(data)
 
 
@@ -190,6 +249,7 @@ class MarketTickMessage(BaseMessage):
     '''
     报价
     '''
+
     def __init__(self):
         self._mt = MsgType()
         self._al = Aligned()
@@ -208,11 +268,15 @@ class MarketTickMessage(BaseMessage):
 
     def UinxTime(self, time):
         self._unix_time = time
+        # 转成毫秒
+        if len(str(self._unix_time)) < 11:
+            self._unix_time *= 1000
 
     def data(self, frame, qty, price, number, stock):
         self._CfiCode = stock
         self._qty = qty
         self._frame = frame
+
         self._price = int(price * self._number_deci)
         self._number = number
 
@@ -235,7 +299,6 @@ class MarketTickMessage(BaseMessage):
         '''
         self.msgtype = self._mt.TICK
         uinx_time_64 = struct.pack("!Q", self._unix_time)
-        uinx_time_64 = uinx_time_64[2:]
 
         qty_64 = struct.pack("!Q", int(self._qty))
         qty_64 = qty_64[2:]
@@ -243,11 +306,56 @@ class MarketTickMessage(BaseMessage):
         price_64 = struct.pack("!Q", int(self._price))
         price_64 = price_64[2:]
 
-        data = struct.pack("!cI6sHc6s6sIc", self.msgtype, self._CfiCode, uinx_time_64, self._frame, self._side,
+        data = struct.pack("!cI8sHc6s6sIc", self.msgtype, self._CfiCode, uinx_time_64, self._frame, self._side,
                            price_64, qty_64, self._number, self.anligned)
 
         return data
-    
+
+
+class CustomMsg(BaseMessage):
+    """
+    自定义数据
+    """
+
+    def __init__(self, cfi, mtype):
+        """Constructor for CustomMsg"""
+        self._mt = MsgType()
+        self._al = Aligned()
+
+        # 转成整数
+        self._number_deci = BaseMessage.number_deci
+
+        self._CfiCode = cfi
+        self._index = 0
+        self._size = 0
+        self._values = b''
+        self._mtype = mtype  # CmType()
+
+    def data(self, value):
+        _value = int(value * self._number_deci)
+
+        type = CmType()
+        self._size += 1
+        if self._mtype == type.UINT16:
+            uint_16 = struct.pack("!H", _value)
+            self._values += uint_16
+        elif self._mtype == type.UINT32:
+            uint_32 = struct.pack("!I", _value)
+            self._values += uint_32
+        elif self._mtype == type.UINT64:
+            uint_64 = struct.pack("!Q", _value)
+            self._values += uint_64
+
+    def toString(self, end=True):
+        msgtype = self._mt.CUSTOM
+        data = struct.pack("!cIHHc", msgtype, self._CfiCode, self._index, self._size, self._mtype)
+        data += self._values
+        if end:
+            data += struct.pack("!c", self._al.PULL)
+        else:
+            data += struct.pack("!c", self._al.UNDER)
+        return data
+
 
 class kafka_producer:
     def __init__(self, topic_name, key, sleep):
@@ -257,8 +365,7 @@ class kafka_producer:
         self._producer_instance = self.get_kafka_producer()
 
     def publish(self, value):
-        logger.info(value)
-        return
+
         try:
             if type(value) is not bytes:
                 value_bytes = bytes(value, encoding='utf-8')
@@ -269,10 +376,10 @@ class kafka_producer:
                 self._topic, key=None, value=value_bytes)
             self._producer_instance.flush()
             # sleep(self._sleep)
-            # debug_print(f"Publish Succesful ({self._key}, {value}) -> {self._topic}")
+            # logger.error(f"Publish Succesful ({self._key}, {value}) -> {self._topic}")
         except Exception as ex:
-            logger.info('Exception in publishing message')
-            logger.info(str(ex))
+            logger.error('Exception in publishing message')
+            logger.error(str(ex))
 
     def get_kafka_producer(self, servers=['kafkaserver:9092']):
         _producer = None
@@ -280,13 +387,13 @@ class kafka_producer:
             _producer = KafkaProducer(
                 bootstrap_servers=servers, api_version=(0, 10))
         except Exception as ex:
-            logger.info('Exception while connecting Kafka')
-            logger.info(str(ex))
+            logger.error('Exception while connecting Kafka')
+            logger.error(str(ex))
         finally:
             return _producer
 
-    def debug_printProgressBar(self, iteration, total, prefix='', suffix='', decimals=1, length=100, fill='█',
-                               debug_printEnd="\r"):
+    def ProgressBar(self, iteration, total, prefix='', suffix='', decimals=1, length=100, fill='█',
+                    End="\r"):
         """
         Call in a loop to create terminal progress bar
         @params:
@@ -297,16 +404,16 @@ class kafka_producer:
             decimals    - Optional  : positive number of decimals in percent complete (Int)
             length      - Optional  : character length of bar (Int)
             fill        - Optional  : bar fill character (Str)
-            debug_printEnd    - Optional  : end character (e.g. "\r", "\r\n") (Str)
+            logger.errorEnd    - Optional  : end character (e.g. "\r", "\r\n") (Str)
         """
-        # if total > 0:
-        #     return
+        if total == 0:
+            return
         percent = ("{0:." + str(decimals) + "f}").format(100 *
                                                          (iteration / float(total)))
         filledLength = int(length * iteration // total)
         bar = fill * filledLength + '-' * (length - filledLength)
-        print(f'\r{prefix} |{bar}| {percent}% {suffix}', end=debug_printEnd)
-        # debug_print New Line on Complete
+        print(f'\r{prefix} |{bar}| {percent}% {suffix}', end=End)
+        # logger.error New Line on Complete
         if iteration == total:
             print()
 
